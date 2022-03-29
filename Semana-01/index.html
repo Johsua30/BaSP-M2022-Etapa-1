@@ -8,52 +8,72 @@
     </head>
     <body>
         <header>
-            <!-- Put elements inside table -->
+            <!-- Header with button to open/close sidebar -->
             <a href="#">
-                <img src="./assets/hamburger.svg" alt="Hamburger button" style="width:35px;height:33px;">
+                <img src="./assets/hamburger.svg" alt="Hamburger button">
             </a>
             <h1>Trackgenix SA</h1>
         </header>
         <aside>
-            <!-- Put elements in tables -->
-            <form action="">
-                <input type="search" name="" id="" placeholder="Search">
-            </form>
-            <h2>Menu</h2>
-            <a href="#">Home</a>
-            <a href="#">Sign Up</a>
-            <a href="#">Log In</a>
-            <h2>Get in touch</h2>
-            <p>
-                Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus,
-                 ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum.
-                 Sed nulla amet lorem feugiat tempus aliquam.
-            </p>
-            <!-- Links will redirect to mail app, map app and telephone -->
-            <a href="mailto:information@trackgenix.tld">
-                <img src="./assets/mail.png" alt="Mail icon" style="width:30px;height:32px;">
+            <!-- Sidebar with nav and contact info -->
+            <div>
+                <form action="">
+                    <input type="search" name="" id="" placeholder="Search">
+                </form>
+            </div>
+            <div>
+                <h2>Menu</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="#">Log In</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h2>Get in touch</h2>
                 <p>
-                    information@trackgenix.tld
+                    Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus,
+                    ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum.
+                    Sed nulla amet lorem feugiat tempus aliquam.
                 </p>
-            </a>
-            <a href="#">
-                <img src="./assets/adress.png" alt="Adress icon" style="width:34px;height:36px;">
-                <p>
-                    1234 Somewhere Road #8254 Nashville, TN 00000-0000
-                </p>
-            </a>
-            <a href="#">
-                <img src="./assets/phone.png" alt="Phone icon" style="width:40px;height:46px;">
-                <p>
-                    (000) 000-0000
-                </p>
-            </a>
+            </div>
+            <div>
+                <!-- Links will redirect to mail app, map app and telephone -->
+                <img src="./assets/mail.png" alt="Mail icon">
+                <a href="mailto:information@trackgenix.tld">
+                    <p>
+                        information@trackgenix.tld
+                    </p>
+                </a>
+                <img src="./assets/adress.png" alt="Adress icon">
+                <a href="#">
+                    <p>
+                        1234 Somewhere Road #8254 Nashville, TN 00000-0000
+                    </p>
+                </a>
+                <img src="./assets/phone.png" alt="Phone icon">
+                <a href="#">
+                    <p>
+                        (000) 000-0000
+                    </p>
+                </a>
+            </div>
         </aside>
         <section>
-            <!-- Put elements in tables -->
+            <!-- Welcome section with company logo -->
             <h2>Welcome to Trackgenix!</h2>
-            <h3>A free website for everyone at Trackgenix!</h3>
-            <img src="./assets/clock.png" alt="Trackgenix logo" style="width:499px;height:554px;">
+            <p>
+                A free website for everyone at Trackgenix!
+            </p>
+            <img src="./assets/clock.png" alt="Trackgenix logo" width="300px">
             <p>
                 here, you can register the hours worked in any project for all employees,
                  generate reports and much more.
@@ -61,29 +81,37 @@
             <button>learn more</button>
         </section>
         <section>
-            <!-- Put elements in tables -->
+            <!-- Add divs -->
             <h2>What can you do?</h2>
-            <img src="./assets/record-hours.png" alt="Record hours icon" style="width:227px;height:227px;">
-            <h3>Record hours</h3>
-            <p>
-                Create, modify and delete projects and assign them to any employee/s
-            </p>
-            <h3>Generate reports</h3>
-            <img src="./assets/generate-reports.png" alt="Generate reports icon" style="width:227px;height:227px;">
-            <p>
-                Emit reports to have a better view and understanding of all the projects. 
-            </p>
-            <h3>Manage resources</h3>
-            <img src="./assets/manage-resources.png" alt="Manage resources icon" style="width:227px;height:227px;">
-            <p>
-                You will be able to see all the information you need
-                 to organize hours of work in the best way possible.
-            </p>
-            <h3>Designate roles</h3>
-            <img src="./assets/designate-roles.png" alt="Designate roles icon" style="width:227px;height:227px;">
-            <p>
-                Establish which employee may have a certain role in the project.
-            </p>
+            <div>
+                <img src="./assets/record-hours.png" alt="Record hours icon">
+                <h3>Record hours</h3>
+                <p>
+                    Create, modify and delete projects and assign them to any employee/s
+                </p>
+            </div>
+            <div>
+                <h3>Generate reports</h3>
+                <img src="./assets/generate-reports.png" alt="Generate reports icon">
+                <p>
+                    Emit reports to have a better view and understanding of all the projects.
+                </p>
+            </div>
+            <div>
+                <h3>Manage resources</h3>
+                <img src="./assets/manage-resources.png" alt="Manage resources icon">
+                <p>
+                    You will be able to see all the information you need
+                    to organize hours of work in the best way possible.
+                </p>
+            </div>
+            <div>
+                <h3>Designate roles</h3>
+                <img src="./assets/designate-roles.png" alt="Designate roles icon">
+                <p>
+                    Establish which employee may have a certain role in the project.
+                </p>
+            </div>
         </section>
         <section>
             <h2>Why use Trackgenix?</h2>
@@ -95,94 +123,143 @@
             </ul>
         </section>
         <section>
+            <!-- Contact form -->
             <h2>Contact Form</h2>
             <form>
-                <!-- Format the form to look like the prototype -->
-                <label>Business name</label>
-                <input type="text" name="business-name">
-                <label>Email</label>
-                <input type="email" name="email">
-                <input type="checkbox" name="human-resources">
-                <label>Human resources</label>
-                <input type="checkbox" name="comercialization">
-                <label>Comercialization</label>
-                <input type="checkbox" name="systems">
-                <label>Systems</label>
-                <label>Phone number</label>
-                <input type="text" name="phone-number">
-                <label>Message</label>
-                <textarea name="message"></textarea>
+                <div>
+                    <label>Business name</label>
+                    <input type="text" name="business-name">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <input type="checkbox" name="human-resources">
+                    <label>Human resources</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="comercialization">
+                    <label>Comercialization</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="systems">
+                    <label>Systems</label>
+                </div>
+                <div>
+                    <label>Phone number</label>
+                    <input type="text" name="phone-number">
+                </div>
+                <div>
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                </div>
                 <input type="submit" value="submit">
             </form>
         </section>
         <section>
-            <!-- Put elements in table -->
-            <h2>Trackgenix History</h2>
-            <p>
-                Trackgenix was founded on April 1, 2014, by college dropouts James Bond and Steve Pitt,
-                 who brought to the new company a vision of changing the way people viewed computers. 
-            </p>
-            <img src="./assets/objetive.png" alt="Meeting image" style="width:269px;height:260px;">
-            <img src="./assets/data-security.png" alt="Data security icon" style="width:78px;height:78px;">
-            <img src="./assets/effective-time.png" alt="effective in time icon" style="width:78px;height:78px;">
-            <p>
-                Objective : Providing the right solutions and getting products into customers' hands with
-                 the support of store team members. 
-            </p>
+            <!-- History and objective of the company -->
+            <div>
+                <h2>Trackgenix History</h2>
+                <p>
+                    Trackgenix was founded on April 1, 2014, by college dropouts James Bond and Steve Pitt,
+                    who brought to the new company a vision of changing the way people viewed computers. 
+                </p>
+            </div>
+            <div>
+                <img src="./assets/objetive.png" alt="Meeting image">
+            </div>
+            <div>
+                <img src="./assets/data-security.png" alt="Data security icon">
+            </div>
+            <div>
+                <img src="./assets/effective-time.png" alt="effective in time icon">
+            </div>
+            <div>
+                <p>
+                    Objective : Providing the right solutions and getting products into customers' hands with
+                    the support of store team members. 
+                </p>
+            </div>
         </section>
         <section>
-            <h3>Products</h3>
-            <ol>
-                <a href="#">
-                    <li>Functionalities</li>
-                </a>
-                <a href="#">
-                    <li>Downloads</li>
-                </a>
-                <a href="#">
-                    <li>Integrations</li>
-                </a>
-                <a href="#">
-                    <li>Extras</li>
-                </a>
-            </ol>
-            <h3>Business</h3>
-            <ol>
-                <a href="#">
-                    <li>About us</li>
-                </a>
-                <a href="#">
-                    <li>Clients</li>
-                </a>
-                <a href="#">
-                    <li>Resources</li>
-                </a>
-                <a href="#">
-                    <li>Blog</li>
-                </a>
-            </ol>
-            <h3>Support</h3>
-            <ol>
-                <a href="#">
-                    <li>Help</li>
-                </a>
-                <a href="#">
-                    <li>Tutorials</li>
-                </a>
-                <a href="#">
-                    <li>API</li>
-                </a>
-                <a href="#">
-                    <li>Contact</li>
-                </a>
-            </ol>
+            <div>
+                <h3>Products</h3>
+                <ol>
+                    <li>
+                        <a href="#">Functionalities</a>
+                    </li>
+                    <li>
+                        <a href="#">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="#">Integrations</a>
+                    </li>
+                    <li>
+                        <a href="#">Extras</a>
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <h3>Business</h3>
+                <ol>
+                    <li>
+                        <a href="#">About us</a>
+                    </li>
+                    <li>
+                        <a href="#">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#">Resources</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ol>
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                    <li>
+                        <a href="#">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ol>
+            </div>
         </section>
         <footer>
-            <h4>Rosario, Argentina</h4>
-            <!-- Add social media icons -->
-            <p>
-                Copyright © 2022 Radium Rocket. All rights reserved.
-            </p>
+            <div>
+                <p>
+                    Rosario, Argentina
+                </p>
+            </div>
+            <nav>
+                <a href="">
+                    <img src="./assets/linkedin.svg" alt="Linkedin icon" width="20">
+                </a>
+                <a href="">
+                    <img src="./assets/instagram.svg" alt="Instagram icon" width="20">
+                </a>
+                <a href="">
+                    <img src="./assets/facebook.svg" alt="Facebook icon" width="20">
+                </a>
+                <a href="">
+                    <img src="./assets/twitter.svg" alt="Twitter icon" width="20">
+                </a>
+            </nav>
+            <div>
+                <p>
+                    Copyright © 2022 Radium Rocket. All rights reserved.
+                </p>
+            </div>
         </footer>
     </body>
 </html>
