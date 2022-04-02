@@ -1,0 +1,75 @@
+h1 {
+    color: rgb(0,0,0); font-family: Raleway, serif; font-size: 30px;
+}
+
+.searchbar {
+    color: rgb(55,56,103,0.5); font-family: Roboto, serif;
+}
+
+aside {
+    color: rgb(84, 84, 84); font-family: Raleway, serif; font-size: 18px;
+}
+
+.sidebar-title {
+    color: rgb(0,0,0); font-size: 24px;
+}
+
+.sidebar-adress {
+    font-size: 16px;
+}
+
+.welcome {
+    color: rgb(0,0,0); font-family: Poppins, 'Times New Roman';
+}
+
+.welcome > h2 {
+    font-size: 64px; font-weight: semibold;
+}
+
+.welcome > p {
+    font-size: 28px; font-weight: bold; font-style: italic;
+}
+
+.welcome > .welcome-paragraph {
+    color: rgb(0,0,0,0.44); font-size: 24px; font-weight: normal; font-style: normal;
+}
+
+.welcome > button {
+    color: rgb(177, 209, 164); font-size: 13px;
+}
+
+.functionalities {
+    color: rgb(0,0,0); font-family: Poppins, 'Times New Roman'; font-size: 28px;
+}
+
+.functionalities > h2 {
+    font-size: 48px;
+}
+
+.functionalities h3 {
+    font-weight: bold;
+}
+
+.benefits {
+    color: rgb(0,0,0); font-family: Poppins, 'Times New Roman'; font-size: 28px;
+}
+
+.benefits > h2 {
+    font-size: 48px;
+}
+
+.contact {
+    color: rgb(0,0,0); font-family: Poppins, 'Times New Roman'; font-size: 14px;
+}
+
+.contact > h2 {
+    font-size: 48px;
+}
+
+.contact-buttons {
+    font-size: 12px; font-weight: lighter;
+}
+
+.contact-submit {
+    color: rgb(55,56,103); font-size: 18px; text-transform: uppercase;
+}
