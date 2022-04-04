@@ -18,7 +18,7 @@ aside {
     font-size: 16px;
 }
 
-.welcome {
+main {
     color: rgb(0,0,0); font-family: Poppins, 'Times New Roman';
 }
 
@@ -35,11 +35,7 @@ aside {
 }
 
 .welcome > button {
-    color: rgb(177, 209, 164); font-size: 13px;
-}
-
-.functionalities {
-    color: rgb(0,0,0); font-family: Poppins, 'Times New Roman'; font-size: 28px;
+    color: rgb(177,209,164); font-size: 13px;
 }
 
 .functionalities > h2 {
@@ -47,23 +43,27 @@ aside {
 }
 
 .functionalities h3 {
-    font-weight: bold;
+    font-weight: bold;  font-size: 28px;
 }
 
-.benefits {
-    color: rgb(0,0,0); font-family: Poppins, 'Times New Roman'; font-size: 28px;
+.functionalities p {
+    font-size: 28px;
 }
 
 .benefits > h2 {
     font-size: 48px;
 }
 
-.contact {
-    color: rgb(0,0,0); font-family: Poppins, 'Times New Roman'; font-size: 14px;
+.benefits li {
+    font-size: 28px;
 }
 
 .contact > h2 {
     font-size: 48px;
+}
+
+.contact label {
+    font-size: 14px;
 }
 
 .contact-buttons {
@@ -72,4 +72,28 @@ aside {
 
 .contact-submit {
     color: rgb(55,56,103); font-size: 18px; text-transform: uppercase;
+}
+
+.history h2 {
+    color: rgb(117,100,100); font-size: 30px;
+}
+
+.history p {
+    font-size: 10px;
+}
+
+.link-list h3 {
+    font-size: 24px; font-weight: bolder;
+}
+
+.link-list ol {
+    list-style-type: decimal; list-style-position: inside; font-size: 18px;
+  }
+
+footer {
+    font-family: Roboto, serif; color: rgb(84,84,84); font-size: 16px;
+}
+
+footer .copyright {
+    font-size: 12px;
 }
