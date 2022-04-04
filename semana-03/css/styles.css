@@ -164,6 +164,8 @@ aside {
 .link-adress a {
     display: inline-block;
     position: relative;
+    width: 221px;
+    bottom: 12px;
 }
 
 .link-phone a {
@@ -191,12 +193,34 @@ main {
 .welcome > h2 {
     font-size: 64px;
     font-weight: semibold;
+    position: relative;
+    top: 20px;
+    width: 413px;
+    height: 238px;
+    margin-bottom: 41px;
+    margin-left: 10px;
 }
 
 .welcome > p {
     font-size: 28px;
     font-weight: bold;
     font-style: italic;
+    position: relative;
+    margin-left: 10px;
+    width: 426px;
+    height: 84px;
+    margin-bottom: 76px;
+}
+
+.comp-logo {
+    position: absolute;
+    display: inline-block;
+    right: 26px;
+    top: 15px;
+}
+
+.comp-logo img {
+    width: 550px;
 }
 
 .welcome > .welcome-paragraph {
@@ -204,37 +228,96 @@ main {
     font-size: 24px;
     font-weight: normal;
     font-style: normal;
+    position: relative;
+    width: 557px;
+    margin-bottom: 75px;
 }
 
 .welcome > button {
-    color: rgb(177,209,164);
+    background-color: rgb(177,209,164);
+    color: rgb(55,56,103);
     font-size: 13px;
     text-transform: uppercase;
+    position: relative;
+    margin-left: 10px;
+    width: 144px;
+    height: 51px;
+}
+
+.functionalities {
+    position: relative;
+    margin-top: 20px;
 }
 
 .functionalities > h2 {
+    position: relative;
     font-size: 48px;
+    width: 886px;
+    left: 106px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgb(177,209,164);
+    margin-bottom: 68px;
 }
 
 .functionalities h3 {
+    display: inline-block;
+    position: relative;
     font-weight: bold;
     font-size: 28px;
+    bottom: 150px;
 }
 
 .functionalities p {
+    display: inline-block;
+    position: relative;
     font-size: 28px;
+    width: 300px;
+    left: 207px;
+    bottom: 150px;
+}
+
+.functionalities div {
+    display: inline-block;
+    width: 48%;
+}
+
+.functionalities img {
+    width: 207px;
+    height: 207px;
+    display: inline-block;
+}
+
+.roles-div {
+    display: inline-block;
+    position: relative;
+    bottom: 50px;
 }
 
 .benefits > h2 {
+    position: relative;
     font-size: 48px;
+    width: 886px;
+    left: 28px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgb(177,209,164);
+    margin-bottom: 50px;
 }
 
 .benefits li {
+    position: relative;
+    left: 28px;
+    margin-bottom: 30px;
     font-size: 28px;
 }
 
 .contact > h2 {
+    position: relative;
     font-size: 48px;
+    width: 886px;
+    left: 28px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgb(177,209,164);
+    margin-bottom: 50px;
 }
 
 .contact label {
