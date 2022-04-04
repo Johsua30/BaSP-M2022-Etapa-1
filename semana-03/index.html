@@ -13,8 +13,12 @@
     <body>
         <header>
             <!-- Header with button to open/close sidebar -->
-            <a href="#"><img src="./assets/hamburger.svg" alt="Hamburger button"></a>
-            <h1>Trackgenix SA</h1>
+            <div class="hamburger-button">
+                <a href="#"><img src="./assets/hamburger.svg" alt="Hamburger button"></a>
+            </div>
+            <div class="header-title">
+                <h1>Trackgenix SA</h1>
+            </div>
         </header>
         <aside>
             <!-- Sidebar with nav and contact info -->
@@ -22,26 +26,27 @@
                 <form action="">
                     <input type="search" name="" id="" placeholder="Search">
                 </form>
+                <img src="./assets/search-icon.png" alt="Search icon" class="search-icon">
             </div>
             <div>
-                <p class="sidebar-title">Menu</p>
+                <p class="sidebar-title-1">Menu</p>
                 <nav class="nav-sidebar">
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#" class="ul-home">Home</a>
                         </li>
                         <li>
-                            <a href="#">Sign Up</a>
+                            <a href="#" class="ul-signup">Sign Up</a>
                         </li>
                         <li>
-                            <a href="#">Log In</a>
+                            <a href="#" class="ul-login">Log In</a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div>
-                <p class="sidebar-title">Get in touch</p>
-                <p>
+                <p class="sidebar-title-2">Get in touch</p>
+                <p class="sidebar-paragraph">
                     Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus,
                     ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum.
                     Sed nulla amet lorem feugiat tempus aliquam.
@@ -49,15 +54,15 @@
             </div>
             <div class="contact-links">
                 <!-- Links will redirect to mail app, map app and telephone -->
-                <div>
+                <div class="link-mail">
                     <img src="./assets/mail.png" alt="Mail icon">
                     <a href="mailto:information@trackgenix.tld">information@trackgenix.tld</a>
                 </div>
-                <div>
+                <div class="link-adress">
                     <img src="./assets/adress.png" alt="Adress icon">
                     <a href="#" class="sidebar-adress">1234 Somewhere Road #8254 Nashville, TN 00000-0000</a>
                 </div>
-                <div>
+                <div class="link-phone">
                     <img src="./assets/phone.png" alt="Phone icon">
                     <a href="#">(000) 000-0000</a>
                 </div>
