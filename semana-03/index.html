@@ -128,47 +128,56 @@
                 <h2>Contact Form</h2>
                 <form>
                     <div>
-                        <label>Business name</label>
-                        <input type="text" name="business-name">
+                        <label class="form-label">Business name</label>
+                        <input type="text" name="business-name" class="form-input">
                     </div>
                     <div>
-                        <label>Email</label>
-                        <input type="email" name="email">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-input">
                     </div>
                     <div class="contact-buttons">
-                        <input type="radio" name="area" value="Human resources"><label for="">Human resources</label>
-                        <input type="radio" name="area" value="Commercialization"><label for="">Commercialization</label>
-                        <input type="radio" name="area" value="Systems"><label for="">Systems</label>
+                        <p class="form-label">
+                            Contact area
+                        </p>
+                        <div>
+                            <input type="radio" name="area" value="Human resources">
+                            <label for="">Human resources</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="area" value="Commercialization">
+                            <label for="">Commercialization</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="area" value="Systems"><label for="">Systems</label>
+                        </div>
                     </div>
                     <div>
-                        <label>Phone number</label>
-                        <input type="text" name="phone-number">
+                        <label class="form-label">Phone number</label>
+                        <input type="text" name="phone-number" class="form-input">
                     </div>
-                    <div>
-                        <label>Message</label>
-                        <textarea name="message"></textarea>
+                    <div class="contact-message">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" class="form-input"></textarea>
                     </div>
                     <input class="contact-submit" type="submit" value="submit">
                 </form>
             </section>
             <section class="history">
-                <div>
+                <div class="history-element1">
                     <h2>Trackgenix History</h2>
                     <p>
                         Trackgenix was founded on April 1, 2014, by college dropouts James Bond and Steve Pitt,
                         who brought to the new company a vision of changing the way people viewed computers. 
                     </p>
                 </div>
-                <div>
+                <div class="history-element2">
                     <img src="./assets/objetive.png" alt="Meeting image">
                 </div>
-                <div>
+                <div class="history-element3">
                     <img src="./assets/data-security.png" alt="Data security icon">
-                </div>
-                <div>
                     <img src="./assets/effective-time.png" alt="effective in time icon">
                 </div>
-                <div>
+                <div class="history-element4">
                     <p>
                         Objective : Providing the right solutions and getting products into customers' hands with
                         the support of store team members. 
@@ -230,7 +239,7 @@
             </section>
         </main>
         <footer>
-            <div>
+            <div class="footer-country">
                 <p>
                     Rosario, Argentina
                 </p>
