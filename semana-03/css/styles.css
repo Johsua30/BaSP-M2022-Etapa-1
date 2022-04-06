@@ -1,10 +1,55 @@
 header {
-    z-index: 1;
-    background-color: rgb(255,255,255);
+    position: fixed;
     width: 1064px;
     height: 156px;
-    position: fixed;
     left: 376px;
+    background-color: rgb(255,255,255);
+    z-index: 1;
+}
+
+h1 {
+    font-family: Raleway, serif;
+    font-size: 30px;
+    color: rgb(0,0,0);
+    font-weight: bold;
+}
+
+aside {
+    position: fixed;
+    width: 376px;
+    height: 1024px;
+    background-color: rgb(164,164,164,0.2);
+    font-family: Raleway, serif;
+    font-size: 18px;
+    color: rgb(84, 84, 84);
+    z-index: 2;
+}
+
+main {
+    position: relative;
+    display: inline-block;
+    width: 1064px;
+    margin-bottom: 200px;
+    top: 156px;
+    left: 376px;
+    background-color: rgb(255,255,255);
+    font-family: Poppins, 'Times New Roman';
+    color: rgb(0,0,0);
+    z-index: 0;
+}
+
+footer {
+    position: fixed;
+    width: 1064px;
+    height: 100px;
+    margin-top: 100px;
+    left: 376px;
+    bottom: 0px;
+    background-color: rgb(255,255,255);
+    font-size: 16px;
+    font-family: Roboto, serif;
+    color: rgb(84,84,84);
+    z-index: 1;
 }
 
 .hamburger-button {
@@ -20,47 +65,29 @@ header {
 }
 
 .header-title {
-    z-index: 2;
     position: relative;
     display: inline-block;
-    left: 89px;
-    top: 75px;
     width: 868px;
     padding-bottom: 23px;
+    left: 89px;
+    top: 75px;
     border-bottom: 1px solid rgb(177,209,164);
-}
-
-h1 {
-    color: rgb(0,0,0);
-    font-family: Raleway, serif;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-aside {
     z-index: 2;
-    color: rgb(84, 84, 84);
-    font-family: Raleway, serif;
-    font-size: 18px;
-    background-color: rgb(164,164,164,0.2);
-    width: 376px;
-    height: 1024px;
-    position: fixed;
 }
 
 .searchbar {
+    margin-bottom: 78px;
     color: rgb(55,56,103,0.5);
     font-family: Roboto, serif;
-    margin-bottom: 78px;
 }
 
 .searchbar input {
+    position: relative;
     width: 257px;
     height: 38px;
-    position: relative;
+    padding-left: 37px;
     left: 40px;
     top: 30px;
-    padding-left: 37px;
 }
 
 .search-icon {
@@ -71,73 +98,69 @@ aside {
 }
 
 .sidebar-title-1 {
+    position: relative;
+    width: 86px;
+    margin-bottom: 74px;
+    padding-bottom: 21px;
+    left: 45px;
+    border-bottom: 1px solid rgb(177,209,164);
     color: rgb(0,0,0);
     font-size: 24px;
-    position: relative;
-    left: 45px;
-    width: 86px;
-    padding-bottom: 21px;
-    border-bottom: 1px solid rgb(177,209,164);
-    margin-bottom: 74px;
 }
 
 .nav-sidebar {
     position: relative;
-    left: 45px;
     width: 271px;
+    left: 45px;
 }
 
 .ul-home, .ul-signup {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     width: 271px;
+    margin-bottom: 33px;
     padding-bottom: 1px;
     border-bottom: 1px solid rgb(164,164,164);
-    margin-bottom: 33px;
 }
 
 .ul-login {
     display: inline-block;
     position: relative;
     width: 271px;
+    margin-bottom: 33px;
     padding-bottom: 73px;
     border-bottom: 1px solid rgb(164,164,164);
-    margin-bottom: 33px;
 }
 
 .sidebar-title-2 {
+    position: relative;
+    width: 180px;
+    margin-bottom: 21px;
+    padding-bottom: 21px;
+    left: 45px;
+    border-bottom: 1px solid rgb(177,209,164);
     color: rgb(0,0,0);
     font-size: 24px;
-    position: relative;
-    left: 45px;
-    width: 180px;
-    padding-bottom: 21px;
-    border-bottom: 1px solid rgb(177,209,164);
-    margin-bottom: 21px;
 }
 
 .sidebar-paragraph {
     position:relative;
-    left: 45px;
     width: 279px;
-    margin-bottom: 29px; 
+    margin-bottom: 29px;
+    left: 45px;
 }
 
 .contact-links {
     position: relative;
-    left: 44px;
     width: 280px;
+    left: 44px;
 }
 
 .link-mail, .link-adress {
     display: inline-block;
+    margin-bottom: 26px;
     padding-bottom: 18px;
     border-bottom: 1px solid rgb(164,164,164);
-    margin-bottom: 26px;
-}
-
-.link-phone {
-    display: inline-block;
 }
 
 .link-mail img {
@@ -145,9 +168,27 @@ aside {
     height: 29px;
 }
 
+.link-mail a {
+    position: relative;
+    display: inline-block;
+    bottom: 5px;
+}
+
 .link-adress img {
     width: 38px;
     height: 41px;
+}
+
+.link-adress a {
+    position: relative;
+    display: inline-block;
+    width: 221px;
+    bottom: 12px;
+    font-size: 16px;
+}
+
+.link-phone {
+    display: inline-block;
 }
 
 .link-phone img {
@@ -155,61 +196,32 @@ aside {
     height: 51px;
 }
 
-.link-mail a {
-    display: inline-block;
-    position: relative;
-    bottom: 5px;
-}
-
-.link-adress a {
-    display: inline-block;
-    position: relative;
-    width: 221px;
-    bottom: 12px;
-}
-
 .link-phone a {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     bottom: 15px;
 }
 
-.sidebar-adress {
-    font-size: 16px;
-}
-
-main {
-    z-index: 0;
-    background-color: rgb(255,255,255);
-    color: rgb(0,0,0);
-    font-family: Poppins, 'Times New Roman';
-    position: relative;
-    width: 1064px;
-    top: 156px;
-    left: 376px;
-    display: inline-block;
-}
-
 .welcome > h2 {
-    font-size: 64px;
-    font-weight: semibold;
     position: relative;
-    top: 20px;
     width: 413px;
     height: 238px;
+    top: 20px;
     margin-bottom: 41px;
     margin-left: 10px;
+    font-size: 64px;
+    font-weight: semibold;
 }
 
 .welcome > p {
+    position: relative;
+    width: 426px;
+    height: 84px;
+    margin-left: 10px;
+    margin-bottom: 76px;
     font-size: 28px;
     font-weight: bold;
     font-style: italic;
-    position: relative;
-    margin-left: 10px;
-    width: 426px;
-    height: 84px;
-    margin-bottom: 76px;
 }
 
 .comp-logo {
@@ -224,24 +236,24 @@ main {
 }
 
 .welcome > .welcome-paragraph {
-    color: rgb(0,0,0,0.44);
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
     position: relative;
     width: 557px;
     margin-bottom: 75px;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    color: rgb(0,0,0,0.44);
 }
 
 .welcome > button {
-    background-color: rgb(177,209,164);
-    color: rgb(55,56,103);
-    font-size: 13px;
-    text-transform: uppercase;
     position: relative;
-    margin-left: 10px;
     width: 144px;
     height: 51px;
+    margin-left: 10px;
+    background-color: rgb(177,209,164);
+    font-size: 13px;
+    color: rgb(55,56,103);
+    text-transform: uppercase;
 }
 
 .functionalities {
@@ -251,29 +263,12 @@ main {
 
 .functionalities > h2 {
     position: relative;
-    font-size: 48px;
     width: 886px;
     left: 106px;
+    margin-bottom: 68px;
     padding-bottom: 23px;
     border-bottom: 1px solid rgb(177,209,164);
-    margin-bottom: 68px;
-}
-
-.functionalities h3 {
-    display: inline-block;
-    position: relative;
-    font-weight: bold;
-    font-size: 28px;
-    bottom: 150px;
-}
-
-.functionalities p {
-    display: inline-block;
-    position: relative;
-    font-size: 28px;
-    width: 300px;
-    left: 207px;
-    bottom: 150px;
+    font-size: 48px;
 }
 
 .functionalities div {
@@ -282,42 +277,59 @@ main {
 }
 
 .functionalities img {
+    display: inline-block;
     width: 207px;
     height: 207px;
+}
+
+.functionalities h3 {
+    position: relative;
     display: inline-block;
+    bottom: 150px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.functionalities p {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    left: 207px;
+    bottom: 150px;
+    font-size: 28px;
 }
 
 .roles-div {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     bottom: 50px;
 }
 
 .benefits > h2 {
     position: relative;
-    font-size: 48px;
     width: 886px;
     left: 28px;
+    margin-bottom: 50px;
     padding-bottom: 23px;
     border-bottom: 1px solid rgb(177,209,164);
-    margin-bottom: 50px;
+    font-size: 48px;
 }
 
 .benefits li {
     position: relative;
-    left: 28px;
     margin-bottom: 30px;
+    left: 28px;
     font-size: 28px;
 }
 
 .contact > h2 {
     position: relative;
-    font-size: 48px;
     width: 886px;
     left: 28px;
+    margin-bottom: 50px;
     padding-bottom: 23px;
     border-bottom: 1px solid rgb(177,209,164);
-    margin-bottom: 50px;
+    font-size: 48px;
 }
 
 .contact > form {
@@ -334,16 +346,16 @@ form > div {
 .form-label {
     position: relative;
     display: block;
-    font-size: 14px;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .form-input {
     position: relative;
     display: inline-block;
-    margin-bottom: 33px;
     width: 359px;
     height: 49px;
+    margin-bottom: 33px;
 }
 
 .contact-buttons {
@@ -353,11 +365,6 @@ form > div {
 
 .contact-buttons > div {
     margin-bottom: 15px;
-}
-
-.contact-buttons > input {
-    display: block;
-    width: 10%;
 }
 
 .contact-message > textarea {
@@ -373,10 +380,10 @@ form > div {
 
 .history {
     position: relative;
-    background-color: rgb(217,224,214);
-    border-radius: 50%;
     width: 80%;
     left: 20px;
+    background-color: rgb(217,224,214);
+    border-radius: 50%;
 }
 
 .history h2 {
@@ -394,8 +401,8 @@ form > div {
 }
 
 .history > div {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     width: 48%;
 }
 
@@ -403,38 +410,38 @@ form > div {
     position: relative;
     display: inline-block;
     width: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
     left: 200px;
     bottom: 50px;
     border-right: 1px solid rgb(255,255,255);
-    padding-right: 100px;
-    padding-top: 50px;
 }
 
-.history-element1 p {
+.history-title p {
     position: relative;
     width: 350px;
-    left: 50px;
     padding-bottom: 50px;
+    left: 50px;
 }
 
-.history-element2 {
+.history-big-image {
     position: relative;
     top: 50px;
 }
 
-.history-element3 {
+.history-small-icons {
     position: relative;
     top: 20px;
     border-right: 1px solid rgb(255,255,255);
 }
 
-.history-element3 > img {
+.history-small-icons > img {
     position: relative;
     width: 91px;
     left: 200px;
 }
 
-.history-element4 p {
+.history-paragraph p {
     position: relative;
     width: 250px;
     margin-bottom: 100px;
@@ -446,17 +453,23 @@ form > div {
     margin-bottom: 100px;
 }
 
+.link-list div {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+}
+
 .link-list h3 {
     width: 268px;
+    margin-bottom: 25px;
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(177,209,164);
-    margin-bottom: 25px;
 }
 
 .link-list ol {
+    font-size: 18px;
     list-style-type: decimal;
     list-style-position: inside;
-    font-size: 18px;
 }
 
 .link-list li {
@@ -464,41 +477,22 @@ form > div {
     margin-bottom: 25px;
 }
 
-.link-list div {
-    position: relative;
-    display: inline-block;
-    width: 30%;
-}
-
-footer {
-    font-family: Roboto, serif;
-    color: rgb(84,84,84);
-    font-size: 16px;
-    z-index: 1;
-    background-color: rgb(255,255,255);
-    width: 1064px;
-    height: 100px;
-    position: relative;
-    left: 376px;
-    margin-top: 100px;
-}
-
 .footer-country {
-    border-top: 1px solid rgb(177,209,164);
     padding-top: 7px;
     margin-left: 120px;
     margin-right: 120px;
+    border-top: 1px solid rgb(177,209,164);
 }
 
 .footer-country > p {
-    display: block;
     position: relative;
+    display: block;
     text-align: center;
 }
 
 footer > nav {
-    display: block;
     position: relative;
+    display: block;
     text-align: center;
 }
 
@@ -509,8 +503,8 @@ footer img {
 }
 
 footer .copyright {
-    font-size: 12px;
-    display: block;
     position: relative;
+    display: block;
+    font-size: 12px;
     text-align: center;
 }
