@@ -1,5 +1,6 @@
 main {
     width: 100vw;
+    margin-top: 10vh;
     background-color: rgb(255,255,255);
     z-index: 1;
 }
