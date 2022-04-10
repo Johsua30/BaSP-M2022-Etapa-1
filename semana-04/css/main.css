@@ -5,7 +5,7 @@ main {
     z-index: 1;
 }
 
-main > .welcome {
+.welcome {
     display: flex;
     flex-direction: column;
     margin: 3%;
@@ -22,7 +22,7 @@ main > .welcome {
     width: 40vw;
 }
 
-main > .functionalities {
+.functionalities {
     margin: 3%;
 }
 
@@ -61,4 +61,59 @@ main > .benefits {
 .benefits li {
     margin: 15px;
     padding-left: 15px;
+}
+
+.contact {
+    margin: 3%;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+.form-content > div {
+    margin: 5%;
+}
+
+.business-name{
+    flex-grow: 1;
+    min-width: 35%;
+}
+
+.email{
+    flex-grow: 1;
+    min-width: 35%;
+}
+
+.contact-buttons {
+    flex-grow: 1;
+}
+
+.phone-number {
+    flex-grow: 1;
+}
+
+.contact-message {
+    flex-grow: 1;
+    min-width: 50%;
+}
+
+.form-label {
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.contact-message > textarea {
+    width: 100%;
+}
+
+.contact-submit {
+    display: block;
+    margin: auto;
 }
