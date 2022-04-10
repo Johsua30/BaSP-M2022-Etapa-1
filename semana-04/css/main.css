@@ -118,6 +118,25 @@ main > .benefits {
     margin: auto;
 }
 
+.history {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 3%;
+}
+
+.history > div {
+    margin: 5%;
+}
+
+.history-big-image {
+    display: none;
+}
+
+.history-small-icons {
+    display: none;
+}
+
 .link-list {
     display: flex;
     flex-flow: row wrap;
