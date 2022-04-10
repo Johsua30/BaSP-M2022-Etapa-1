@@ -5,8 +5,19 @@ footer {
     align-items: center;
     width: 100%;
     bottom: 0px;
-    background-color: white;
+    background-color: rgb(255,255,255);
+    font-size: 16px;
+    font-family: Roboto, serif, Arial;
+    color: rgb(84,84,84);
+    z-index: 2;
+}
+
+.footer-country {
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
     border-top: 1px solid rgb(177,209,164);
+    text-align: center;
 }
 
 footer > * {

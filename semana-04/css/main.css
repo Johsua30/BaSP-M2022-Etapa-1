@@ -3,13 +3,21 @@ main {
     margin-top: 10vh;
     margin-bottom: 10vh;
     background-color: rgb(255,255,255);
+    font-family: Poppins, 'Times New Roman', Helvetica;
+    color: rgb(0,0,0);
     z-index: 1;
 }
 
 .welcome {
     display: flex;
     flex-direction: column;
-    margin: 3%;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .welcome .container-logo-text {
@@ -17,14 +25,41 @@ main {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .comp-logo > img {
     width: 40vw;
 }
 
+.welcome-paragraph {
+    font-size: 12px;
+    color: rgb(0,0,0,0.44);
+}
+
+.welcome button {
+    width: 120px;
+    height: 90%;
+    margin: 10px;
+    background-color: rgb(177,209,164);
+    border-radius: 7px;
+    font-size: 13px;
+    color: rgb(55,56,103);
+    text-transform: uppercase;
+}
+
 .functionalities {
-    margin: 3%;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(177,209,164);
+    font-size: 24px;
 }
 
 .functionalities .functionalities-box {
@@ -52,20 +87,29 @@ main {
 .funct-element .funct-text {
     flex-shrink: 1;
     max-width: 250px;
+    font-size: 14px;
     text-align: center;
 }
 
-main > .benefits {
-    margin: 3%;
+.funct-text > h3 {
+    font-weight: bold;
+}
+
+.benefits {
+    margin: 20px;
+    margin-bottom: 40px;
 }
 
 .benefits li {
-    margin: 15px;
+    margin: 20px;
     padding-left: 15px;
+    font-size: 14px;
 }
 
 .contact {
-    margin: 3%;
+    margin: 20px;
+    margin-bottom: 40px;
+    font-size: 14px;
 }
 
 .form-content {
@@ -90,6 +134,7 @@ main > .benefits {
 
 .contact-buttons {
     flex-grow: 1;
+    font-size: 12px;
 }
 
 .phone-number {
@@ -116,6 +161,11 @@ main > .benefits {
 .contact-submit {
     display: block;
     margin: auto;
+    background-color: rgb(170,206,155);
+    border-radius: 7px;
+    color: rgb(55,56,103);
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 .history {
@@ -125,8 +175,19 @@ main > .benefits {
     margin: 3%;
 }
 
+.history h2 {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(177,209,164);
+    font-size: 24px;
+}
+
+.history p {
+    font-size: 14px;
+}
+
 .history > div {
-    margin: 5%;
+    margin: 20px;
 }
 
 .history-big-image {
@@ -145,12 +206,12 @@ main > .benefits {
 }
 
 .link-list-block {
-    flex-grow: 1;
-    min-width: 30%;
+    min-width: 25%;
+    margin: 30px;
 }
 
 .link-list h3 {
-    margin-right: 40%;
+    margin-right: 20px;
     margin-bottom: 25px;
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(177,209,164);
@@ -165,7 +226,6 @@ main > .benefits {
 }
 
 .link-list li {
-    width: 100%;
     margin-left: 25px;
     margin-bottom: 25px;
 }
