@@ -1,0 +1,26 @@
+footer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    border-top: 1px solid rgb(177,209,164);
+}
+
+footer > * {
+    margin: 5px;
+}
+
+footer > nav {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+footer img {
+    width: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

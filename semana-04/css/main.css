@@ -1,6 +1,7 @@
 main {
-    width: 100vw;
+    width: 95%;
     margin-top: 10vh;
+    margin-bottom: 10vh;
     background-color: rgb(255,255,255);
     z-index: 1;
 }
@@ -69,8 +70,7 @@ main > .benefits {
 
 .form-content {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     margin: 5%;
 }
 
@@ -116,4 +116,37 @@ main > .benefits {
 .contact-submit {
     display: block;
     margin: auto;
+}
+
+.link-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 3%;
+}
+
+.link-list-block {
+    flex-grow: 1;
+    min-width: 30%;
+}
+
+.link-list h3 {
+    margin-right: 40%;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(177,209,164);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.link-list ol {
+    font-size: 18px;
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.link-list li {
+    width: 100%;
+    margin-left: 25px;
+    margin-bottom: 25px;
 }
