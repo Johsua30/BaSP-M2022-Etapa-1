@@ -1,3 +1,47 @@
 aside {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 27vw;
+    height: 100vh;
+    margin-top: 10vh;
+    margin-left: 30px;
+    padding: 20px;
+    padding-right: 40px;
+    border-right: 1px solid rgb(0,0,0);
+    font-size: 18px;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sidebar-title {
+    margin-top: 40px;
+    margin-right: 50%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(177,209,164);
+    color: rgb(0,0,0);
+    font-size: 24px;
+}
+
+.nav-sidebar li {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(164,164,164);
+}
+
+.sidebar-paragraph {
+    margin-bottom: 20px;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(164,164,164);
 }

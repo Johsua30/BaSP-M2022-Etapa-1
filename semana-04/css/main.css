@@ -58,7 +58,7 @@ main {
 .section-title {
     margin-bottom: 30px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgb(177,209,164);
+    border-bottom: 2px solid rgb(177,209,164);
     font-size: 24px;
 }
 
@@ -178,7 +178,7 @@ main {
 .history h2 {
     margin-bottom: 30px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgb(177,209,164);
+    border-bottom: 2px solid rgb(177,209,164);
     font-size: 24px;
 }
 
@@ -214,7 +214,7 @@ main {
     margin-right: 20px;
     margin-bottom: 25px;
     padding-bottom: 5px;
-    border-bottom: 1px solid rgb(177,209,164);
+    border-bottom: 2px solid rgb(177,209,164);
     font-size: 24px;
     font-weight: bold;
 }
