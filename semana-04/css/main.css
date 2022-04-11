@@ -31,7 +31,7 @@ main {
 }
 
 .comp-logo > img {
-    width: 40vw;
+    width: 30vw;
 }
 
 .welcome-paragraph {
@@ -75,7 +75,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 10px;
+    margin: 5px;
 }
 
 .funct-element img {
@@ -86,7 +86,7 @@ main {
 
 .funct-element .funct-text {
     flex-shrink: 1;
-    max-width: 250px;
+    max-width: 200px;
     font-size: 14px;
     text-align: center;
 }
@@ -160,7 +160,10 @@ main {
 
 .contact-submit {
     display: block;
+    width: 25%;
+    height: 40px;
     margin: auto;
+    margin-right: 5vw;
     background-color: rgb(170,206,155);
     border-radius: 7px;
     color: rgb(55,56,103);

@@ -1,14 +1,21 @@
 aside {
     display: flex;
     flex-direction: column;
-    width: 27vw;
-    height: 100vh;
-    margin-top: 10vh;
-    margin-left: 30px;
+    margin-left: 2%;
     padding: 20px;
     padding-right: 40px;
-    border-right: 1px solid rgb(0,0,0);
     font-size: 18px;
+}
+
+.sidebar {
+    display: none;
+    max-width: 350px;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(255,255,255);
+    border-right: 1px solid rgb(0,0,0);
+    z-index: 3;
 }
 
 .search-bar {
@@ -18,9 +25,9 @@ aside {
 }
 
 .sidebar-title {
-    margin-top: 40px;
+    margin-top: 7vh;
     margin-right: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 5vh;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(177,209,164);
     color: rgb(0,0,0);
@@ -28,13 +35,13 @@ aside {
 }
 
 .nav-sidebar li {
-    margin-bottom: 25px;
+    margin-bottom: 5%;
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(164,164,164);
 }
 
 .sidebar-paragraph {
-    margin-bottom: 20px;
+    margin-bottom: 5vh;
 }
 
 .link-container {
@@ -44,4 +51,10 @@ aside {
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgb(164,164,164);
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: inline-block;
+    }
 }
