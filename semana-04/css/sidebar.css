@@ -9,12 +9,12 @@ aside {
 
 .sidebar {
     display: none;
-    max-width: 350px;
     height: 100vh;
     left: 0px;
     top: 0px;
     background-color: rgb(255,255,255);
     border-right: 1px solid rgb(0,0,0);
+    font-family: Raleway, serif, Arial;
     z-index: 3;
 }
 
@@ -22,12 +22,20 @@ aside {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-family: Roboto, serif, Arial;
+}
+
+.search-bar input {
+    background-image: url("/assets/search-icon.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .sidebar-title {
-    margin-top: 7vh;
-    margin-right: 50%;
-    margin-bottom: 5vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-right: 30%;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(177,209,164);
     color: rgb(0,0,0);
@@ -35,7 +43,7 @@ aside {
 }
 
 .nav-sidebar li {
-    margin-bottom: 5%;
+    margin-bottom: 2vh;
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(164,164,164);
 }
@@ -54,7 +62,76 @@ aside {
 }
 
 @media (min-width: 768px) {
+    header {
+        width: 70%;
+    }
+
+    footer {
+        width: 73%;
+    }
+
     .sidebar {
         display: inline-block;
+        max-width: 300px;
+    }
+
+    .functionalities .funct-element {
+        flex-direction: column;
+    }
+
+    .funct-element img {
+        width: 109px;
+    }
+
+    .form-content {
+        flex-flow: column nowrap;
+    }
+
+    .link-list {
+        flex-flow: column nowrap;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        max-width: 350px;
+    }
+
+    .welcome h2 {
+        max-width: 50%;
+        font-size: 64px;
+        text-align: left;
+    }
+
+    .welcome .container-logo-text {
+        font-size: 28px;
+    }
+
+    .welcome-paragraph {
+        max-width: 60%;
+        font-size: 24px;
+    }
+
+    .functionalities {
+        margin-right: 0px;
+    }
+    
+    .functionalities .funct-element {
+        flex-direction: row;
+        min-width: 40%;
+        margin-right: 0px;
+    }
+
+    .form-content {
+        flex-flow: row wrap;
+    }
+
+    .link-list {
+        flex-flow: row wrap;
+        margin-right: 0px;
+    }
+
+    .link-list-block {
+        margin: 20px;
     }
 }
