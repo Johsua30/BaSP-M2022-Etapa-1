@@ -26,12 +26,13 @@ aside {
 }
 
 .search-bar input {
-    background-image: url("./assets/mail.png");
+    background-image: url("../assets/search-icon.png");
     background-position: left;
-    background-size: contain;
+    background-size: 20px 20px;
     background-repeat: no-repeat;
     width: 150%;
     height: 30px;
+    padding-left: 20%;
     border-radius: 5px;
 }
 
