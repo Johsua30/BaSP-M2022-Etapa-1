@@ -1,6 +1,6 @@
 /* Crear una variable de tipo string con al menos 10 caracteres
 y convertir todo el texto en mayúscula (utilizar toUpperCase). */
-var stringsA1 = 'Una cadena de caracteres en minuscula';
+var stringsA1 = 'a lower case string';
 var stringsA2 = stringsA1.toUpperCase();
 
 console.log(stringsA2);
@@ -8,7 +8,7 @@ console.log(stringsA2);
 /* Crear una variable de tipo string con al menos 10 caracteres y
 generar un nuevo string con los primeros 5 caracteres guardando el
 resultado en una nueva variable (utilizar substring). */
-var stringsB1 = 'Una cadena con muchos caracteres';
+var stringsB1 = 'A long string';
 var stringsB2 = stringsB1.substring(0, 5);
 
 console.log(stringsB2);
@@ -16,7 +16,7 @@ console.log(stringsB2);
 /* Crear una variable de tipo string con al menos 10 caracteres y
 generar un nuevo string con los últimos 3 caracteres guardando el
 resultado en una nueva variable (utilizar substring). */
-var stringsC1 = 'Hay que quitar los ultimos caracteres';
+var stringsC1 = 'String with a lot of characters';
 var stringsC2 = stringsC1.substring((stringsC1.length - 1), stringsC1.length - 4);
 
 console.log(stringsC2);
@@ -25,7 +25,7 @@ console.log(stringsC2);
 generar un nuevo string con la primera letra en mayúscula y las demás
 en minúscula. Guardar el resultado en una nueva variable (utilizar substring,
 toUpperCase, toLowerCase y el operador +). */
-var stringsD1 = 'se TRATA de UNA cadena.';
+var stringsD1 = 'this IS a STRING.';
 var stringsD2 = (stringsD1.substring(0, 1)).toUpperCase() + (stringsD1.substring(1, stringsD1.length)).toLowerCase();
 
 console.log(stringsD2);
@@ -33,7 +33,7 @@ console.log(stringsD2);
 /* Crear una variable de tipo string con al menos 10 caracteres y algún
 espacio en blanco. Encontrar la posición del primer espacio en blanco y
 guardarla en una variable (utilizar indexOf). */
-var stringsE1 = 'Encontrar la posición del primer espacio';
+var stringsE1 = 'Find the position of the first space';
 var stringsE2 = stringsE1.indexOf(' ');
 
 console.log(stringsE2);
