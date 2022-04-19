@@ -41,7 +41,6 @@ main {
 }
 
 .welcome button {
-    width: 120px;
     height: 90%;
     margin: 10px;
     background-color: rgb(177,209,164);
@@ -232,4 +231,78 @@ main {
 .link-list li {
     margin-left: 25px;
     margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .functionalities .funct-element {
+        flex-direction: column;
+    }
+
+    .funct-element img {
+        width: 109px;
+    }
+
+    .form-content {
+        flex-flow: column nowrap;
+    }
+
+    .link-list {
+        flex-flow: column nowrap;
+    }
+}
+
+@media (min-width: 1024px) {
+    .welcome h2 {
+        max-width: 50%;
+        font-size: 64px;
+        text-align: left;
+    }
+
+    .welcome .container-logo-text {
+        font-size: 28px;
+    }
+
+    .welcome-paragraph {
+        max-width: 60%;
+        font-size: 24px;
+    }
+
+    .functionalities {
+        margin-right: 0px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .functionalities .funct-element {
+        flex-direction: row;
+        min-width: 40%;
+        margin-right: 0px;
+    }
+
+    .benefits li {
+        font-size: 20px;
+    }
+
+    .form-content {
+        flex-flow: row wrap;
+    }
+
+    .history h2 {
+        font-size: 30px;
+    }
+
+    .history p {
+        font-size: 20px;
+    }
+
+    .link-list {
+        flex-flow: row wrap;
+        margin-right: 0px;
+    }
+
+    .link-list-block {
+        margin: 20px;
+    }
 }

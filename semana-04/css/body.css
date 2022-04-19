@@ -5,10 +5,11 @@ body {
 }
 
 .sidebar {
-    flex-grow: 1;
+    flex-grow: 2;
+    width: 100%;
 }
 
 .header-main-footer {
-    flex-grow: 0;
+    flex-grow: 1;
     overflow-y: auto;
 }

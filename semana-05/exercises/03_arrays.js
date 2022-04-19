@@ -1,57 +1,71 @@
 /* Dado el siguiente array: ["Enero", "Febrero", "Marzo",
 "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
 "Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log). */
-var arrayA = ["Enero", "Febrero", "Marzo",
-"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
+console.log('\n------------------------------------------------------------\n3.a:')
 
-console.log(arrayA[4] + ' ' + arrayA[10]);
+var arrayMonths = ["January", "February", "March",
+"April", "May", "June", "July", "August", "September",
+"October", "November", "Dicember"];
+
+console.log(arrayMonths[4] + ' ' + arrayMonths[10]);
 
 /* Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort). */
-var arrayB = ["Enero", "Febrero", "Marzo",
-"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
+console.log('\n------------------------------------------------------------\n3.b:')
 
-console.log(arrayB.sort());
+var arrayMonthsToSort = ["January", "February", "March",
+"April", "May", "June", "July", "August", "September",
+"October", "November", "Dicember"];
+
+console.log(arrayMonthsToSort.sort());
 
 /* Agregar un elemento al principio y al final del array (utilizar unshift y push). */
-var arrayC = ["Enero", "Febrero", "Marzo",
-"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
+console.log('\n------------------------------------------------------------\n3.c:')
 
-arrayC.unshift('Years');
-arrayC.push('Months');
-console.log(arrayC);
+var arrayMonthsToAdd = ["January", "February", "March",
+"April", "May", "June", "July", "August", "September",
+"October", "November", "Dicember"];
+
+arrayMonthsToAdd.unshift('Years');
+arrayMonthsToAdd.push('Months');
+console.log(arrayMonthsToAdd);
 
 /* Quitar un elemento del principio y del final del array (utilizar shift y pop). */
-var arrayD = ["Enero", "Febrero", "Marzo",
-"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
+console.log('\n------------------------------------------------------------\n3.d:')
 
-arrayD.shift();
-arrayD.pop();
-console.log(arrayD);
+var arrayMonthsToDelete = ["January", "February", "March",
+"April", "May", "June", "July", "August", "September",
+"October", "November", "Dicember"];
+
+arrayMonthsToDelete.shift();
+arrayMonthsToDelete.pop();
+console.log(arrayMonthsToDelete);
 
 /* Invertir el orden del array (utilizar reverse). */
-var arrayE = ["Enero", "Febrero", "Marzo",
-"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
+console.log('\n------------------------------------------------------------\n3.e:')
+
+var arrayE = ["January", "February", "March",
+"April", "May", "June", "July", "August", "September",
+"October", "November", "Dicember"];
 
 console.log(arrayE.reverse());
 
 /* Unir todos los elementos del array en un único string
 donde cada mes este separado por un guión - (utilizar join). */
-var arrayF1 = ["Enero", "Febrero", "Marzo",
-"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
-var arrayF2 = arrayF1.join('-');
+console.log('\n------------------------------------------------------------\n3.f:')
 
-console.log(arrayF2);
+var arrayMonthsToJoin = ["January", "February", "March",
+"April", "May", "June", "July", "August", "September",
+"October", "November", "Dicember"];
+var arrayMonthsJoined = arrayMonthsToJoin.join('-');
+
+console.log(arrayMonthsJoined);
 
 /* Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice). */
-var arrayG1 = ["Enero", "Febrero", "Marzo",
-"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
-var arrayG2 = arrayG1.slice(4, 11);
+console.log('\n------------------------------------------------------------\n3.g:')
 
-console.log(arrayG2);
+var arrayMonthsToShorten = ["January", "February", "March",
+"April", "May", "June", "July", "August", "September",
+"October", "November", "Dicember"];
+var arrayMonthsShortened = arrayMonthsToShorten.slice(4, 11);
+
+console.log(arrayMonthsShortened);

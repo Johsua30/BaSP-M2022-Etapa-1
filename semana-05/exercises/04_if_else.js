@@ -1,12 +1,14 @@
 /* Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(),
 si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje
 “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5”. */
+console.log('\n------------------------------------------------------------\n4.a:')
+
 var randomNumber = Math.random();
-console.log(randomNumber);
+console.log(randomNumber); /* This line is here to easily see the variable thats going to be evaluated */
 if (randomNumber >= 0.5) {
-    console.log('Greater than 0,5');
+    alert('Exercise 4.a: Greater than 0,5');
 } else {
-    console.log('Lower than 0,5');
+    alert('Exercise 4.a: Lower than 0,5');
 }
 
 /* Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
@@ -17,26 +19,29 @@ if (randomNumber >= 0.5) {
 “Adulto” entre 31 y 60 años;
 “Adulto mayor” entre 61 y 75 años;
 “Anciano” si es mayor a 75 años. */
+console.log('\n------------------------------------------------------------\n4.b:')
+
 var age = 57;
+console.log(age); /* This line is here to easily see the variable thats going to be evaluated */
 if (age < 2) {
-    console.log('Baby');
+    alert('Exercise 4.b: Baby');
 } else { 
     if (age <= 12) {
-        console.log('Kid');
+        alert('Exercise 4.b: Kid');
     } else {
         if (age <= 19) {
-            console.log('Adolescent');
+            alert('Exercise 4.b: Adolescent');
         } else {
             if (age <= 30) {
-                console.log('Young adult');
+                alert('Exercise 4.b: Young adult');
             } else {
                 if (age <= 60) {
-                    console.log('Adult');
+                    alert('Exercise 4.b: Adult');
                 } else {
                     if (age <= 75) {
-                        console.log('Older adult');
+                        alert('Exercise 4.b: Older adult');
                     } else {
-                        console.log('Elderly');
+                        alert('Exercise 4.b: Elderly');
                     }
                 }
             }
