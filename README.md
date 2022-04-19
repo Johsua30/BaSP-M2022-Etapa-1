@@ -16,6 +16,10 @@ With CSS I applied the styles to the elements of the landing page and rearranged
 Made the content responsive by using flexbox to arrange the elements in the page. Also separated the code in different files depending on the sections of code they affect.
 Activated the pages section on GitHub to be able to view the page online.
 
+## Week 5:
+Instead of working on the page we learned about Javascript. The task was to solve exercises about variables, control sentences, loops and functions. 
+[Here](https://johsua30.github.io/BaSP-M2022-Etapa-1/semana-05/) is the link to the index.html file with the solved exercises linked. To see the solutions right click on the background, select Inspect and open the Console.
+
 # How to view the page online:
 
 >1- Open this [link](https://johsua30.github.io/BaSP-M2022-Etapa-1/) to the page of the project on GitHub.
