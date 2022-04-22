@@ -20,6 +20,9 @@ Activated the pages section on GitHub to be able to view the page online.
 Instead of working on the page we learned about Javascript. The task was to solve exercises about variables, control sentences, loops and functions. 
 [Here](https://johsua30.github.io/BaSP-M2022-Etapa-1/semana-05/) is the link to the index.html file with the solved exercises linked. To see the solutions right click on the background, select Inspect and open the Console.
 
+## Week 6:
+The task was to create the log in and sign up using the styles from the landing page and make them show the errors or the success of the action with javascript. All the validation is done with javascript. Also the landing page, the log in and sign up will link to each other.
+
 # How to view the page online:
 
 >1- Open this [link](https://johsua30.github.io/BaSP-M2022-Etapa-1/) to the page of the project on GitHub.
