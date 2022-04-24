@@ -1,0 +1,37 @@
+main {
+    width: 95%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: rgb(255,255,255);
+    font-family: Poppins, 'Times New Roman', Helvetica;
+    color: rgb(0,0,0);
+    z-index: 1;
+}
+
+.login {
+    margin: 20%;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(177,209,164);
+    font-size: 24px;
+}
+
+.form-content > div {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.login-submit {
+    display: block;
+    margin: auto;
+    margin-right: 5vw;
+    background-color: rgb(170,206,155);
+    border-radius: 7px;
+    color: rgb(55,56,103);
+    font-size: 18px;
+    text-transform: uppercase;
+}

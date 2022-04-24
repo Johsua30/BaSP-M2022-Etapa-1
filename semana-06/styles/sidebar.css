@@ -37,8 +37,8 @@ aside {
 }
 
 .sidebar-title {
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     margin-right: 30%;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(177,209,164);
@@ -53,16 +53,21 @@ aside {
 }
 
 .sidebar-paragraph {
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
 }
 
 .link-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 2px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgb(164,164,164);
+}
+
+.link-container > a {
+    overflow-wrap: break-word;
 }
 
 @media (min-width: 768px) {

@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="../styles/login.css">
         <link rel="stylesheet" href="../styles/footer.css">
         <link rel="stylesheet" href="../styles/sidebar.css">
+        <script src="../javascript/login.js"></script>
         <meta name="author" content="Nowak Johsua">
         <title>Trackgenix SA</title>
     </head>
@@ -51,7 +52,7 @@
                     <!-- Links will redirect to mail app, map app and telephone -->
                     <div class="link-container">
                         <img src="../assets/mail.png" alt="Mail icon">
-                        <a href="mailto:information@trackgenix.tld">information@trackgenix.tld</a>
+                        <a href="mailto:information@trackgenix.tld">information@<wbr>trackgenix.tld</a>
                     </div>
                     <div class="link-container">
                         <img src="../assets/adress.png" alt="Adress icon">
@@ -77,7 +78,22 @@
                 </div>
             </header>
             <main>
-
+                <section class="login">
+                    <h2 class="section-title">Log In</h2>
+                    <form>
+                        <div class="form-content">
+                            <div class="email">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="email" class="form-input" id="login-email-field">
+                            </div>
+                            <div class="password">
+                                <label class="form-label">Password</label>
+                                <input type="text" name="password" class="form-input" id="login-password-field">
+                            </div>
+                        </div>
+                        <input class="login-submit" type="submit" value="log in" id="login-submit-button">
+                    </form>
+                </section>
             </main>
             <footer>
                 <div class="footer-country">
