@@ -8,10 +8,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Raleway|Poppins">
         <link rel="stylesheet" href="../styles/body.css">
         <link rel="stylesheet" href="../styles/header.css">
-        <link rel="stylesheet" href="../styles/login.css">
+        <link rel="stylesheet" href="../styles/employee-signup.css">
         <link rel="stylesheet" href="../styles/footer.css">
         <link rel="stylesheet" href="../styles/sidebar.css">
-        <script src="../javascript/login.js"></script>
+        <script src="../javascript/employee-signup.js"></script>
         <meta name="author" content="Nowak Johsua">
         <title>Trackgenix SA</title>
     </head>
@@ -78,10 +78,53 @@
                 </div>
             </header>
             <main>
-                <section class="login">
-                    <h2 class="section-title">Log In</h2>
+                <section class="signup">
+                    <h2 class="section-title">Sign Up</h2>
                     <form>
                         <div class="form-content">
+                            <div class="name">
+                                <label class="form-label">Name</label>
+                                <input type="text" name="name" class="form-input" id="signup-name-field">
+                                <p id="signup-name-warning"></p>
+                            </div>
+                            <div class="last-name">
+                                <label class="form-label">Last name</label>
+                                <input type="text" name="last-name" class="form-input" id="signup-last-name-field">
+                                <p id="signup-last-name-warning"></p>
+                            </div>
+                            <div class="dni">
+                                <label class="form-label">DNI</label>
+                                <input type="text" name="dni" class="form-input" id="signup-dni-field">
+                                <p id="signup-dni-warning"></p>
+                            </div>
+                            <div class="date-of-birth">
+                                <label class="form-label">Date of birth</label>
+                                <input type="text" name="date-of-birth"
+                                class="form-input" id="signup-date-of-birth-field">
+                                <p id="signup-date-of-birth-warning"></p>
+                            </div>
+                            <div class="phone-number">
+                                <label class="form-label">Phone number</label>
+                                <input type="text" name="phone-number"
+                                class="form-input" id="signup-phone-number-field">
+                                <p id="signup-phone-number-warning"></p>
+                            </div>
+                            <div class="adress">
+                                <label class="form-label">Adress</label>
+                                <input type="text" name="adress" class="form-input" id="signup-adress-field">
+                                <p id="signup-adress-warning"></p>
+                            </div>
+                            <div class="city">
+                                <label class="form-label">City</label>
+                                <input type="text" name="city" class="form-input" id="signup-city-field">
+                                <p id="signup-city-warning"></p>
+                            </div>
+                            <div class="postal-code">
+                                <label class="form-label">Postal code</label>
+                                <input type="text" name="postal-code"
+                                class="form-input" id="signup-postal-code-field">
+                                <p id="signup-postal-code-warning"></p>
+                            </div>
                             <div class="email">
                                 <label class="form-label">Email</label>
                                 <input type="email" name="email" class="form-input" id="login-email-field">
@@ -92,8 +135,14 @@
                                 <input type="text" name="password" class="form-input" id="login-password-field">
                                 <p id="login-password-warning"></p>
                             </div>
+                            <div class="password-repeat">
+                                <label class="form-label">Repeat password</label>
+                                <input type="text" name="password-repeat"
+                                class="form-input" id="login-password-repeat-field">
+                                <p id="login-password-repeat-warning"></p>
+                            </div>
                         </div>
-                        <input class="login-submit" type="submit" value="log in" id="login-submit-button">
+                        <input class="signup-create" type="submit" value="create" id="signup-create-button">
                     </form>
                 </section>
             </main>

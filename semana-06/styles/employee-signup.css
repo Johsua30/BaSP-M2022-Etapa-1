@@ -1,0 +1,52 @@
+main {
+    width: 95%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: rgb(255,255,255);
+    font-family: Poppins, 'Times New Roman', Helvetica;
+    color: rgb(0,0,0);
+    z-index: 1;
+}
+
+.signup {
+    margin: 5%;
+    margin-bottom: 30%;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(177,209,164);
+    font-size: 24px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-content > div {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    min-width: 45%;
+}
+
+.signup-create {
+    display: block;
+    margin: auto;
+    margin-right: 5vw;
+    background-color: rgb(170,206,155);
+    border-radius: 7px;
+    color: rgb(55,56,103);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+    .form-content > div {
+        min-width: 43%;
+    }
+}
