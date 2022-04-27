@@ -35,6 +35,8 @@ The task was to create the log in and sign up using the styles from the landing 
 
 >Click [here](https://johsua30.github.io/BaSP-M2022-Etapa-1/semana-04/) to see the project at the end of week 4.
 
+>>Click [here](https://johsua30.github.io/BaSP-M2022-Etapa-1/semana-06/views) to see the project at the end of week 6.
+
 # How to view the page offline:
 
 >1- Download the project files from the [repository](https://github.com/Johsua30/BaSP-M2022-Etapa-1/) by clicking the green button labeled "Code" and then "Download ZIP"
