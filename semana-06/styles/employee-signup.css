@@ -34,6 +34,11 @@ main {
     min-width: 45%;
 }
 
+.form-content > div > p {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+}
+
 .signup-create {
     display: block;
     margin: auto;
@@ -48,5 +53,6 @@ main {
 @media (min-width: 1024px) {
     .form-content > div {
         min-width: 43%;
+        max-width: 43%;
     }
 }

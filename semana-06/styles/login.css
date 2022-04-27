@@ -25,6 +25,11 @@ main {
     margin: 5%;
 }
 
+.form-content > div > p {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+}
+
 .login-submit {
     display: block;
     margin: auto;
