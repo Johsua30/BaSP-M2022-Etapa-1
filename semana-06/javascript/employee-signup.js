@@ -291,12 +291,17 @@ window.onload = function() {
     }
 
     function passwordRepeatCheckBlur() {
-        if (password.value == passwordRepeat.value) {
-            passwordRepeatWarning.textContent = '';
-            return (passwordRepeat.value);
+        if (password.value == ''){
+            passwordRepeatWarning.textContent = 'Password field cannot be empty';
+            return ('Error: Repeat password field is empty');
         } else {
-            passwordRepeatWarning.textContent = 'Passwords do not match';
-            return ('Error: Passwords do not match');
+            if (password.value == passwordRepeat.value) {
+                passwordRepeatWarning.textContent = '';
+                return (passwordRepeat.value);
+            } else {
+                passwordRepeatWarning.textContent = 'Passwords do not match';
+                return ('Error: Passwords do not match');
+            }
         }
     }
 
