@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.sidebar {
+    flex-grow: 1;
+    width: 30%;
+}
+
+.header-main-footer {
+    flex-grow: 1;
+    overflow-y: auto;
+    width: 65vw;
+}

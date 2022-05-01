@@ -23,6 +23,9 @@ Instead of working on the page we learned about Javascript. The task was to solv
 ## Week 6:
 The task was to create the log in and sign up using the styles from the landing page and make them show the errors or the success of the action with javascript. All the validation is done with javascript. Also the landing page, the log in and sign up will link to each other.
 
+## Week 7:
+I worked on the files of the previous week adding an HTTP request if all the fields in the form are valid. The objective is to send the data to a server and if all data is correct save locally the contents of the fields.
+
 # How to view the page online:
 
 >1- Open this [link](https://johsua30.github.io/BaSP-M2022-Etapa-1/) to the page of the project on GitHub.
@@ -35,7 +38,9 @@ The task was to create the log in and sign up using the styles from the landing 
 
 >Click [here](https://johsua30.github.io/BaSP-M2022-Etapa-1/semana-04/) to see the project at the end of week 4.
 
->>Click [here](https://johsua30.github.io/BaSP-M2022-Etapa-1/semana-06/views) to see the project at the end of week 6.
+>Click [here](https://johsua30.github.io/BaSP-M2022-Etapa-1/semana-06/views) to see the project at the end of week 6.
+
+>Click [here](https://johsua30.github.io/BaSP-M2022-Etapa-1/semana-06/views) to see the project at the end of week 6.
 
 # How to view the page offline:
 
