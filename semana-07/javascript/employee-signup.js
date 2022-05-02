@@ -122,7 +122,7 @@ window.onload = function() {
     }
 
     // Functions that trigger on blur
-    function nameCheckBlur() {
+    function nameCheck() {
         if (name.value == '') {
             nameWarning.textContent = 'Name field cannot be empty';
             return ('Error: Name field is empty');
@@ -140,7 +140,7 @@ window.onload = function() {
         }
     }
 
-    function lastNameCheckBlur() {
+    function lastnameCheck() {
         if (lastName.value == '') {
             lastNWarning.textContent = 'Last name field cannot be empty';
             return ('Error: Last name field is empty');
@@ -158,7 +158,7 @@ window.onload = function() {
         }
     }
 
-    function dniCheckBlur() {
+    function dniCheck() {
         if (dni.value == '') {
             dniWarning.textContent = 'DNI field cannot be empty';
             return ('Error: DNI field is empty');
@@ -174,7 +174,8 @@ window.onload = function() {
         }
     }
 
-    function dateOfBirthCheckBlur() {
+    function dateBirthCheck() {
+        console.log(dateOfBirth.value);
         if (dateOfBirth.value == '') {
             dateOfBirthWarning.textContent = 'Please select date of birth';
             return ('Error: Date of birth not selected');
@@ -187,7 +188,7 @@ window.onload = function() {
         }
     }
 
-    function phoneNumberCheckBlur() {
+    function phoneNumberCheck() {
         if (phoneNumber.value == '') {
             phoneNumWarning.textContent = 'Phone number field cannot be empty';
             return ('Error: Phone number field is empty');
@@ -206,7 +207,7 @@ window.onload = function() {
         }
     }
 
-    function adressCheckBlur() {
+    function adressCheck() {
         if (adress.value == '') {
             adressWarning.textContent = 'Adress field cannot be empty';
             return ('Error: Adress field is empty');
@@ -222,7 +223,7 @@ window.onload = function() {
         }
     }
 
-    function cityCheckBlur() {
+    function cityCheck() {
         if (city.value == '') {
             cityWarning.textContent = 'City field cannot be empty';
             return ('Error: City field is empty');
@@ -240,7 +241,7 @@ window.onload = function() {
         }
     }
 
-    function postalCodeCheckBlur() {
+    function postalCodeCheck() {
         if (postalCode.value == '') {
             postalCodeWarning.textContent = 'Postal code field cannot be empty';
             return ('Error: Postal code field is empty');
@@ -259,7 +260,7 @@ window.onload = function() {
         }
     }
 
-    function emailCheckBlur() {
+    function emailCheck() {
         if (email.value == '') {
             emailWarning.textContent = 'Email field cannot be empty';
             return ('Error: Email field is empty');
@@ -274,7 +275,7 @@ window.onload = function() {
         }
     }
 
-    function passwordCheckBlur() {
+    function passwordCheck() {
         if (password.value == '') {
             passwordWarning.textContent = 'Password field cannot be empty';
             return ('Error: Password field is empty');
@@ -290,7 +291,7 @@ window.onload = function() {
         }
     }
 
-    function passwordRepeatCheckBlur() {
+    function passwordRepCheck() {
         if (password.value == ''){
             passwordRepWarning.textContent = 'Password field cannot be empty';
             return ('Error: Repeat password field is empty');
@@ -387,7 +388,7 @@ window.onload = function() {
         }
     }
 
-    function passwordRepeatCheckFocus() {
+    function passwordRepCheck() {
         if (passwordRepeat.value === '') {
             passwordRepWarning.textContent = '';
         } else {
@@ -398,54 +399,54 @@ window.onload = function() {
     // Submit function
 
     function submitMessage() {
-        alert('Name: ' + nameCheckBlur() +
-        '\nLast name: ' + lastNameCheckBlur() +
-        '\nDNI: ' + dniCheckBlur() +
-        '\nDate of birth: ' + dateOfBirthCheckBlur() +
-        '\nPhone number: ' + phoneNumberCheckBlur() +
-        '\nAdress: ' + adressCheckBlur() +
-        '\nCity: ' + cityCheckBlur() +
-        '\nPostal code: ' + postalCodeCheckBlur() +
-        '\nEmail: ' + emailCheckBlur() +
-        '\nPassword: ' + passwordCheckBlur() +
-        '\nRepeat password: ' + passwordRepeatCheckBlur());
+        alert('Name: ' + nameCheck() +
+        '\nLast name: ' + lastnameCheck() +
+        '\nDNI: ' + dniCheck() +
+        '\nDate of birth: ' + dateBirthCheck() +
+        '\nPhone number: ' + phoneNumberCheck() +
+        '\nAdress: ' + adressCheck() +
+        '\nCity: ' + cityCheck() +
+        '\nPostal code: ' + postalCodeCheck() +
+        '\nEmail: ' + emailCheck() +
+        '\nPassword: ' + passwordCheck() +
+        '\nRepeat password: ' + passwordRepCheck());
     }
 
 
 
     // Events for the functions
-    name.addEventListener("blur", nameCheckBlur);
+    name.addEventListener("blur", nameCheck);
     name.addEventListener("focus", nameCheckFocus);
 
-    lastName.addEventListener("blur", lastNameCheckBlur);
+    lastName.addEventListener("blur", lastnameCheck);
     lastName.addEventListener("focus", lastNameCheckFocus);
 
-    dni.addEventListener("blur", dniCheckBlur);
+    dni.addEventListener("blur", dniCheck);
     dni.addEventListener("focus", dniCheckFocus);
 
-    dateOfBirth.addEventListener("blur", dateOfBirthCheckBlur);
+    dateOfBirth.addEventListener("blur", dateBirthCheck);
     dateOfBirth.addEventListener("focus", dateOfBirthCheckFocus);
 
-    phoneNumber.addEventListener("blur", phoneNumberCheckBlur);
+    phoneNumber.addEventListener("blur", phoneNumberCheck);
     phoneNumber.addEventListener("focus", phoneNumberCheckFocus);
 
-    adress.addEventListener("blur", adressCheckBlur);
+    adress.addEventListener("blur", adressCheck);
     adress.addEventListener("focus", adressCheckFocus);
 
-    city.addEventListener("blur", cityCheckBlur);
+    city.addEventListener("blur", cityCheck);
     city.addEventListener("focus", cityCheckfocus);
 
-    postalCode.addEventListener("blur", postalCodeCheckBlur);
+    postalCode.addEventListener("blur", postalCodeCheck);
     postalCode.addEventListener("focus", postalCodeCheckFocus);
 
-    email.addEventListener("blur", emailCheckBlur);
+    email.addEventListener("blur", emailCheck);
     email.addEventListener("focus", emailCheckFocus);
 
-    password.addEventListener("blur", passwordCheckBlur);
+    password.addEventListener("blur", passwordCheck);
     password.addEventListener("focus", passwordCheckFocus);
 
-    passwordRepeat.addEventListener("blur", passwordRepeatCheckBlur);
-    passwordRepeat.addEventListener("focus", passwordRepeatCheckFocus);
+    passwordRepeat.addEventListener("blur", passwordRepCheck);
+    passwordRepeat.addEventListener("focus", passwordRepCheck);
 
     signupButton.addEventListener("click", submitMessage);
 
