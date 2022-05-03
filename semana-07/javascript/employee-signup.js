@@ -5,7 +5,7 @@ window.onload = function() {
     var dni = document.getElementById('signup-dni-field');
     var dateOfBirth = document.getElementById('signup-date-of-birth-field');
     var phoneNumber = document.getElementById('signup-phone-number-field');
-    var adress = document.getElementById('signup-adress-field');
+    var address = document.getElementById('signup-address-field');
     var city = document.getElementById('signup-city-field');
     var postalCode = document.getElementById('signup-postal-code-field');
     var email = document.getElementById('signup-email-field');
@@ -22,7 +22,7 @@ window.onload = function() {
     var dniWarning = document.getElementById('signup-dni-warning');
     var dateOfBirthWarning = document.getElementById('signup-date-of-birth-warning');
     var phoneNumWarning = document.getElementById('signup-phone-number-warning');
-    var adressWarning = document.getElementById('signup-adress-warning');
+    var addressWarning = document.getElementById('signup-address-warning');
     var cityWarning = document.getElementById('signup-city-warning');
     var postalCodeWarning = document.getElementById('signup-postal-code-warning');
     var emailWarning = document.getElementById('signup-email-warning');
@@ -32,20 +32,25 @@ window.onload = function() {
     // Regex for email
     var emailRegEx = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i;
 
+    // Array with the result of the validations
+    var arrayFinalValidation = [false, false, false, false, false, false, false, false, false, false, false];
+    
 
     // Functions to help in validation
 
 
     // Validates if all characters are only numbers
     function validateNumbers(stringToValidate) {
-        for (var i = 0; i < stringToValidate.length; i++) {
         arrayOfString = stringToValidate.split('');
+        var valid = true;
+        for (var i = 0; i < stringToValidate.length; i++) {
             if (arrayOfString[i] == ' ') {
-                return true;
+                valid = valid && true;
             } else {
-                return (isNaN(stringToValidate));
+                valid = valid && (isNaN(stringToValidate));
             }
         }
+        return valid;
     }
 
     // Validates if all characters on a string are letters
@@ -121,6 +126,54 @@ window.onload = function() {
         }
     }
 
+    // Transforms from date input field to MM/DD/YYYY
+    function transformDateRequest(date) {
+        var dateTransformed = date.substring(5, 7) + '/' + date.substring(8, date.length) + '/' + date.substring(0, 4);
+        return dateTransformed;
+    }
+
+    // Transforms from MM/DD/YYYY to YYYY-MM-DD
+    function transformDateForm(date) {
+        var dateTransformed = date.substring(6, date.length) + '-' + date.substring(0, 2) + '-' + date.substring(3, 5);
+        return dateTransformed;
+    }
+
+    // Saves data from the server into the local storage
+
+    function saveLocalStorage(response) {
+        localStorage.setItem('name', response.data.name);
+        localStorage.setItem('lastName', response.data.lastName);
+        localStorage.setItem('dni', response.data.dni);
+        localStorage.setItem('dob', response.data.dob);
+        localStorage.setItem('phone', response.data.phone);
+        localStorage.setItem('address', response.data.address);
+        localStorage.setItem('city', response.data.city);
+        localStorage.setItem('postalCode', response.data.zip);
+        localStorage.setItem('email', response.data.email);
+        localStorage.setItem('password', response.data.password);
+        localStorage.setItem('passwordRepeat', response.data.password);
+    }
+
+    // 
+    // acereje = localStorage.getItem('name');
+    // document.getElementById('signup-name-field').value = acereje;
+    // document.getElementById('signup-date-of-birth-field').value = ('2002-08-09');
+    // console.log(transformDateRequest(document.getElementById('signup-date-of-birth-field').value))
+
+    function loadLocalStorage() {
+        document.getElementById('signup-name-field') = localStorage.getItem('name');
+        document.getElementById('signup-last-name-field') = localStorage.getItem('lastName');
+        document.getElementById('signup-dni-field') = localStorage.getItem('dni');
+        document.getElementById('signup-date-of-birth-field') = transformDateForm(localStorage.getItem('dob'));
+        document.getElementById('signup-phone-number-field') = localStorage.getItem('phone');
+        document.getElementById('signup-address-field') = localStorage.getItem('address');
+        document.getElementById('signup-city-field') = localStorage.getItem('city');
+        document.getElementById('signup-postal-code-field') = localStorage.getItem('postalCode');
+        document.getElementById('signup-email-field') = localStorage.getItem('email');
+        document.getElementById('signup-password-field') = localStorage.getItem('password');
+        document.getElementById('signup-password-repeat-field') = localStorage.getItem('passwordRepeat');
+    }
+
     // Functions that trigger on blur
     function nameCheck() {
         if (name.value == '') {
@@ -175,7 +228,6 @@ window.onload = function() {
     }
 
     function dateBirthCheck() {
-        console.log(dateOfBirth.value);
         if (dateOfBirth.value == '') {
             dateOfBirthWarning.textContent = 'Please select date of birth';
             return ('Error: Date of birth not selected');
@@ -207,19 +259,19 @@ window.onload = function() {
         }
     }
 
-    function adressCheck() {
-        if (adress.value == '') {
-            adressWarning.textContent = 'Adress field cannot be empty';
-            return ('Error: Adress field is empty');
-        } else if (validateSpace(adress.value) == false) {
-            adressWarning.textContent = 'Adress does not have a space\nor space is in the wrong position';
-            return ('Error: Adress does not have a space or space is in the wrong position');
-        } else if (separateAndValidate(adress.value)) {
-            adressWarning.textContent = '';
-            return (adress.value);
+    function addressCheck() {
+        if (address.value == '') {
+            addressWarning.textContent = 'address field cannot be empty';
+            return ('Error: address field is empty');
+        } else if (validateSpace(address.value) == false) {
+            addressWarning.textContent = 'address does not have a space\nor space is in the wrong position';
+            return ('Error: address does not have a space or space is in the wrong position');
+        } else if (separateAndValidate(address.value)) {
+            addressWarning.textContent = '';
+            return (address.value);
         } else {
-            adressWarning.textContent = 'Adress field can only have letters and numbers';
-            return ('Error: Adress has simbols');
+            addressWarning.textContent = 'address field can only have letters and numbers';
+            return ('Error: address has simbols');
         }
     }
 
@@ -348,11 +400,11 @@ window.onload = function() {
         }
     }
 
-    function adressCheckFocus() {
-        if (adress.value === '') {
-            adressWarning.textContent = '';
+    function addressCheckFocus() {
+        if (address.value === '') {
+            addressWarning.textContent = '';
         } else {
-            adressWarning.textContent = '';
+            addressWarning.textContent = '';
         }
     }
 
@@ -404,7 +456,7 @@ window.onload = function() {
         '\nDNI: ' + dniCheck() +
         '\nDate of birth: ' + dateBirthCheck() +
         '\nPhone number: ' + phoneNumberCheck() +
-        '\nAdress: ' + adressCheck() +
+        '\naddress: ' + addressCheck() +
         '\nCity: ' + cityCheck() +
         '\nPostal code: ' + postalCodeCheck() +
         '\nEmail: ' + emailCheck() +
@@ -412,6 +464,34 @@ window.onload = function() {
         '\nRepeat password: ' + passwordRepCheck());
     }
 
+    // Function to send data to the api and handle the errors or successes
+    function submitSignup(event) {
+        event.preventDefault();
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
+        if (true) {
+            fetch(url + '?name=Jack&lastName=Nowak&dni=38540163&dob=03/30/1995&phone=1234567890&address=Lorenzo 1385&city=Rosario&zip=2000&email=hola@hola.com&password=qwe123qwe')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (jsonResponse) {
+                console.log("json", jsonResponse);
+                if (jsonResponse.success) {
+                    console.log("Good", jsonResponse);
+                    saveLocalStorage(jsonResponse);
+                    alert(jsonResponse.msg);
+                } else {
+                    alert('Error\n' + jsonResponse.msg);
+                    throw jsonResponse;
+                }
+            })
+            .catch(function (error) {
+                console.warn('Error', error);
+                alert('Wrong');
+            })
+            } else {
+            alert('Invalid');
+        }
+    }
 
 
     // Events for the functions
@@ -430,8 +510,8 @@ window.onload = function() {
     phoneNumber.addEventListener("blur", phoneNumberCheck);
     phoneNumber.addEventListener("focus", phoneNumberCheckFocus);
 
-    adress.addEventListener("blur", adressCheck);
-    adress.addEventListener("focus", adressCheckFocus);
+    address.addEventListener("blur", addressCheck);
+    address.addEventListener("focus", addressCheckFocus);
 
     city.addEventListener("blur", cityCheck);
     city.addEventListener("focus", cityCheckfocus);
@@ -448,6 +528,6 @@ window.onload = function() {
     passwordRepeat.addEventListener("blur", passwordRepCheck);
     passwordRepeat.addEventListener("focus", passwordRepCheck);
 
-    signupButton.addEventListener("click", submitMessage);
+    signupButton.addEventListener("click", submitSignup);
 
 }
