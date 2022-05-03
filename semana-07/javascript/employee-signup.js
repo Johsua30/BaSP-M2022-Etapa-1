@@ -1,33 +1,33 @@
 window.onload = function() {
     // Put all form fields in variables
-    var name = document.getElementById('signup-name-field');
-    var lastName = document.getElementById('signup-last-name-field');
-    var dni = document.getElementById('signup-dni-field');
-    var dateOfBirth = document.getElementById('signup-date-of-birth-field');
-    var phoneNumber = document.getElementById('signup-phone-number-field');
-    var address = document.getElementById('signup-address-field');
-    var city = document.getElementById('signup-city-field');
-    var postalCode = document.getElementById('signup-postal-code-field');
-    var email = document.getElementById('signup-email-field');
-    var password = document.getElementById('signup-password-field');
-    var passwordRepeat = document.getElementById('signup-password-repeat-field');
+    var name = document.getElementById('name-field');
+    var lastName = document.getElementById('last-name-field');
+    var dni = document.getElementById('dni-field');
+    var dateOfBirth = document.getElementById('date-of-birth-field');
+    var phoneNumber = document.getElementById('phone-number-field');
+    var address = document.getElementById('address-field');
+    var city = document.getElementById('city-field');
+    var postalCode = document.getElementById('postal-code-field');
+    var email = document.getElementById('email-field');
+    var password = document.getElementById('password-field');
+    var passwordRepeat = document.getElementById('password-repeat-field');
     var signupButton = document.querySelector('.signup-create');
 
     // Put "Create" button in a variable
     var signupButton = document.querySelector('.signup-create');
 
     // Put all warning text in variables
-    var nameWarning = document.getElementById('signup-name-warning');
-    var lastNWarning = document.getElementById('signup-last-name-warning');
-    var dniWarning = document.getElementById('signup-dni-warning');
-    var dateOfBirthWarning = document.getElementById('signup-date-of-birth-warning');
-    var phoneNumWarning = document.getElementById('signup-phone-number-warning');
-    var addressWarning = document.getElementById('signup-address-warning');
-    var cityWarning = document.getElementById('signup-city-warning');
-    var postalCodeWarning = document.getElementById('signup-postal-code-warning');
-    var emailWarning = document.getElementById('signup-email-warning');
-    var passwordWarning = document.getElementById('signup-password-warning');
-    var passwordRepWarning = document.getElementById('signup-password-repeat-warning');
+    var nameWarning = document.getElementById('name-warning');
+    var lastNWarning = document.getElementById('last-name-warning');
+    var dniWarning = document.getElementById('dni-warning');
+    var dateOfBirthWarning = document.getElementById('date-of-birth-warning');
+    var phoneNumWarning = document.getElementById('phone-number-warning');
+    var addressWarning = document.getElementById('address-warning');
+    var cityWarning = document.getElementById('city-warning');
+    var postalCodeWarning = document.getElementById('postal-code-warning');
+    var emailWarning = document.getElementById('email-warning');
+    var passwordWarning = document.getElementById('password-warning');
+    var passwordRepWarning = document.getElementById('password-repeat-warning');
 
     // Regex for email
     var emailRegEx = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i;
@@ -139,7 +139,6 @@ window.onload = function() {
     }
 
     // Saves data from the server into the local storage
-
     function saveLocalStorage(response) {
         localStorage.setItem('name', response.data.name);
         localStorage.setItem('lastName', response.data.lastName);
@@ -154,205 +153,245 @@ window.onload = function() {
         localStorage.setItem('passwordRepeat', response.data.password);
     }
 
-    // 
-    // acereje = localStorage.getItem('name');
-    // document.getElementById('signup-name-field').value = acereje;
-    // document.getElementById('signup-date-of-birth-field').value = ('2002-08-09');
-    // console.log(transformDateRequest(document.getElementById('signup-date-of-birth-field').value))
-
-    function loadLocalStorage() {
-        document.getElementById('signup-name-field') = localStorage.getItem('name');
-        document.getElementById('signup-last-name-field') = localStorage.getItem('lastName');
-        document.getElementById('signup-dni-field') = localStorage.getItem('dni');
-        document.getElementById('signup-date-of-birth-field') = transformDateForm(localStorage.getItem('dob'));
-        document.getElementById('signup-phone-number-field') = localStorage.getItem('phone');
-        document.getElementById('signup-address-field') = localStorage.getItem('address');
-        document.getElementById('signup-city-field') = localStorage.getItem('city');
-        document.getElementById('signup-postal-code-field') = localStorage.getItem('postalCode');
-        document.getElementById('signup-email-field') = localStorage.getItem('email');
-        document.getElementById('signup-password-field') = localStorage.getItem('password');
-        document.getElementById('signup-password-repeat-field') = localStorage.getItem('passwordRepeat');
-    }
+    // Verify if the local storage is empty and if not, load the values on the form
+    document.getElementById('name-field').value = (localStorage.getItem('name') !== null) ? localStorage.getItem('name') : '';
+    document.getElementById('last-name-field').value = (localStorage.getItem('lastName') !== null) ? localStorage.getItem('lastName') : '';
+    document.getElementById('dni-field').value = (localStorage.getItem('dni') !== null) ? localStorage.getItem('dni') : '';
+    document.getElementById('date-of-birth-field').value = (localStorage.getItem('dob') !== null) ? transformDateForm(localStorage.getItem('dob')) : '';
+    document.getElementById('phone-number-field').value = (localStorage.getItem('phone') !== null) ? localStorage.getItem('phone') : '';
+    document.getElementById('address-field').value = (localStorage.getItem('address') !== null) ? localStorage.getItem('address') : '';
+    document.getElementById('city-field').value = (localStorage.getItem('city') !== null) ? localStorage.getItem('city') : '';
+    document.getElementById('postal-code-field').value = (localStorage.getItem('postalCode') !== null) ? localStorage.getItem('postalCode') : '';
+    document.getElementById('email-field').value = (localStorage.getItem('email') !== null) ? localStorage.getItem('email') : '';
+    document.getElementById('password-field').value = (localStorage.getItem('password') !== null) ? localStorage.getItem('password') : '';
+    document.getElementById('password-repeat-field').value = (localStorage.getItem('passwordRepeat') !== null) ? localStorage.getItem('passwordRepeat') : '';
 
     // Functions that trigger on blur
     function nameCheck() {
-        if (name.value == '') {
+        if (name.value === '') {
             nameWarning.textContent = 'Name field cannot be empty';
+            arrayFinalValidation[0] = false;
             return ('Error: Name field is empty');
         } else if (validateLetter(name.value)) {
             if (name.value.length > 3) {
                 nameWarning.textContent = '';
+                arrayFinalValidation[0] = true;
                 return (name.value);
             } else {
                 nameWarning.textContent = 'Name is too short';
+                arrayFinalValidation[0] = false;
                 return ('Error: Name is too short');
             }
         } else {
             nameWarning.textContent = 'Name can\'t have non letter characters';
+            arrayFinalValidation[0] = false;
             return ('Error: Name has characters that are not letters');
         }
     }
 
-    function lastnameCheck() {
-        if (lastName.value == '') {
+    function lastNameCheck() {
+        if (lastName.value === '') {
             lastNWarning.textContent = 'Last name field cannot be empty';
+            arrayFinalValidation[1] = false;
             return ('Error: Last name field is empty');
         } else if (validateLetter(lastName.value)) {
             if (lastName.value.length > 3) {
                 lastNWarning.textContent = '';
+                arrayFinalValidation[1] = true;
                 return (lastName.value);
             } else {
                 lastNWarning.textContent = 'last name is too short';
+                arrayFinalValidation[1] = false;
                 return ('Error: Last name is too short');
             }
         } else {
             lastNWarning.textContent = 'Name can\'t have non letter characters';
+            arrayFinalValidation[1] = false;
             return ('Error: Name has characters that are not letters');
         }
     }
 
     function dniCheck() {
-        if (dni.value == '') {
-            dniWarning.textContent = 'DNI field cannot be empty';
-            return ('Error: DNI field is empty');
+        if (dni.value === '') {
+            dniWarning.textContent = 'DNI field cannot be empty and can only contain numbers';
+            arrayFinalValidation[2] = false;
+            return ('Error: DNI field is empty or contains non number characters');
         } else if (validateNumbers(dni.value)) {
             dniWarning.textContent = 'DNI field can only contain numbers';
+            arrayFinalValidation[2] = false;
             return ('Error: DNI contains non number characters');
-        } else if (dni.value.length > 7) {
+        } else if (dni.value.length > 8) {
+            dniWarning.textContent = 'DNI is too long';
+            arrayFinalValidation[2] = false;
+            return ('Error: DNI is too long');
+        } else if (dni.value.length > 6) {
             dniWarning.textContent = '';
+            arrayFinalValidation[2] = true;
             return (dni.value);
         } else {
             dniWarning.textContent = 'DNI is too short';
+            arrayFinalValidation[2] = false;
             return ('Error: DNI is too short');
         }
     }
 
     function dateBirthCheck() {
-        if (dateOfBirth.value == '') {
+        if (dateOfBirth.value === '') {
             dateOfBirthWarning.textContent = 'Please select date of birth';
+            arrayFinalValidation[3] = false;
             return ('Error: Date of birth not selected');
         } else if (Date.parse(dateOfBirth.value) > Date.now()) {
             dateOfBirthWarning.textContent = 'Date of birth is not in the past';
+            arrayFinalValidation[3] = false;
             return ('Error: Date of birth is not in the past');
         } else {
             dateOfBirth.textContent = '';
+            arrayFinalValidation[3] = true;
             return (dateOfBirth.value);
         }
     }
 
     function phoneNumberCheck() {
-        if (phoneNumber.value == '') {
-            phoneNumWarning.textContent = 'Phone number field cannot be empty';
-            return ('Error: Phone number field is empty');
+        if (phoneNumber.value === '') {
+            phoneNumWarning.textContent = 'Phone number field cannot be empty and can only contain numbers';
+            arrayFinalValidation[4] = false;
+            return ('Error: Phone number field is empty or contains non number characters');
         } else if (validateNumbers(phoneNumber.value)) {
             phoneNumWarning.textContent = 'Phone number field can only contain numbers';
+            arrayFinalValidation[4] = false;
             return ('Error: Phone number contains non number characters');
         } else if (phoneNumber.value.length == 10) {
             phoneNumWarning.textContent = '';
+            arrayFinalValidation[4] = true;
             return (phoneNumber.value);
         } else if (phoneNumber.value.length < 10) {
             phoneNumWarning.textContent = 'Phone number is too short';
+            arrayFinalValidation[4] = false;
             return ('Error: Phone number is too short');
         } else {
             phoneNumWarning.textContent = 'Phone number is too long';
+            arrayFinalValidation[4] = false;
             return ('Error: Phone number is too long');
         }
     }
 
     function addressCheck() {
-        if (address.value == '') {
+        if (address.value === '') {
             addressWarning.textContent = 'address field cannot be empty';
+            arrayFinalValidation[5] = false;
             return ('Error: address field is empty');
         } else if (validateSpace(address.value) == false) {
             addressWarning.textContent = 'address does not have a space\nor space is in the wrong position';
+            arrayFinalValidation[5] = false;
             return ('Error: address does not have a space or space is in the wrong position');
         } else if (separateAndValidate(address.value)) {
             addressWarning.textContent = '';
+            arrayFinalValidation[5] = true;
             return (address.value);
         } else {
             addressWarning.textContent = 'address field can only have letters and numbers';
+            arrayFinalValidation[5] = false;
             return ('Error: address has simbols');
         }
     }
 
     function cityCheck() {
-        if (city.value == '') {
+        if (city.value === '') {
             cityWarning.textContent = 'City field cannot be empty';
+            arrayFinalValidation[6] = false;
             return ('Error: City field is empty');
         } else if (validateLetterNumberSpace(city.value)) {
             if (city.value.length > 3) {
                 cityWarning.textContent = '';
+                arrayFinalValidation[6] = true;
                 return (city.value);
             } else {
                 cityWarning.textContent = 'City name is too short';
+                arrayFinalValidation[6] = false;
                 return ('Error: City name is too short');
             }
         } else {
             cityWarning.textContent = 'City field can only have letters, numbers and spaces';
+            arrayFinalValidation[6] = false;
             return ('Error: City field has simbols');
         }
     }
 
     function postalCodeCheck() {
-        if (postalCode.value == '') {
-            postalCodeWarning.textContent = 'Postal code field cannot be empty';
-            return ('Error: Postal code field is empty');
+        if (postalCode.value === '') {
+            postalCodeWarning.textContent = 'Postal code field cannot be empty and can only contain numbers';
+            arrayFinalValidation[7] = false;
+            return ('Error: Postal code field is empty or contains non number characters');
         } else if (validateNumbers(postalCode.value)) {
             postalCodeWarning.textContent = 'Postal code field can only contain numbers';
+            arrayFinalValidation[7] = false;
             return ('Error: Postal code contains non number characters');
         } else if (postalCode.value.length < 4) {
             postalCodeWarning.textContent = 'Postal code is too short';
+            arrayFinalValidation[7] = false;
             return ('Error: Postal code is too short');
         } else if (postalCode.value.length > 5) {
             postalCodeWarning.textContent = 'Postal code is too long';
+            arrayFinalValidation[7] = false;
             return ('Error: Postal code is too long');
         } else {
             postalCodeWarning.textContent = '';
+            arrayFinalValidation[7] = true;
             return (postalCode.value);
         }
     }
 
     function emailCheck() {
-        if (email.value == '') {
+        if (email.value === '') {
             emailWarning.textContent = 'Email field cannot be empty';
+            arrayFinalValidation[8] = false;
             return ('Error: Email field is empty');
         } else {
             if (validateEmail(email)) {
                 emailWarning.textContent = 'Inputted text is not a valid email';
+                arrayFinalValidation[8] = false;
                 return ('Error: Inputted text is not a valid email');
             } else {
                 emailWarning.textContent = '';
+                arrayFinalValidation[8] = true;
                 return (email.value)
             }
         }
     }
 
     function passwordCheck() {
-        if (password.value == '') {
+        if (password.value === '') {
             passwordWarning.textContent = 'Password field cannot be empty';
+            arrayFinalValidation[9] = false;
             return ('Error: Password field is empty');
         } else if (validateLetterNumber(password.value) == false) {
             passwordWarning.textContent = 'Inputted password is not valid';
+            arrayFinalValidation[9] = false;
             return ('Error: Inputted password is not valid');
-        } else if (password.value.length < 8) {
+        } else if (password.value.length < 7) {
             passwordWarning.textContent = 'Inputted password is too short';
+            arrayFinalValidation[9] = false;
             return ('Error: Inputted password is too short');
         } else {
             passwordWarning.textContent = '';
+            arrayFinalValidation[9] = true;
             return (password.value);
         }
     }
 
     function passwordRepCheck() {
-        if (password.value == ''){
+        if (passwordRepeat.value == ''){
             passwordRepWarning.textContent = 'Password field cannot be empty';
+            arrayFinalValidation[10] = false;
             return ('Error: Repeat password field is empty');
         } else {
-            if (password.value == passwordRepeat.value) {
+            if (password.value === passwordRepeat.value) {
                 passwordRepWarning.textContent = '';
+                arrayFinalValidation[10] = true;
                 return (passwordRepeat.value);
             } else {
                 passwordRepWarning.textContent = 'Passwords do not match';
+                arrayFinalValidation[10] = false;
                 return ('Error: Passwords do not match');
             }
         }
@@ -440,7 +479,7 @@ window.onload = function() {
         }
     }
 
-    function passwordRepCheck() {
+    function passwordRepCheckFocus() {
         if (passwordRepeat.value === '') {
             passwordRepWarning.textContent = '';
         } else {
@@ -448,48 +487,78 @@ window.onload = function() {
         }
     }
 
-    // Submit function
+    // Function to show the request errors
+    function reqErrors(response) {
+        var message = '';
+        for (var index = 0; index < response.errors.length; index++) {
+            message = message + response.errors[index].msg + '\n';
+        }
+        return (message);
+    }
 
-    function submitMessage() {
-        alert('Name: ' + nameCheck() +
-        '\nLast name: ' + lastnameCheck() +
-        '\nDNI: ' + dniCheck() +
-        '\nDate of birth: ' + dateBirthCheck() +
-        '\nPhone number: ' + phoneNumberCheck() +
-        '\naddress: ' + addressCheck() +
-        '\nCity: ' + cityCheck() +
-        '\nPostal code: ' + postalCodeCheck() +
-        '\nEmail: ' + emailCheck() +
-        '\nPassword: ' + passwordCheck() +
-        '\nRepeat password: ' + passwordRepCheck());
+    // Alert to show the success of the request and the data returned
+
+    function alertSuccess(response) {
+        alert(response.msg + 
+        '\nName: ' + response.data.name +
+        '\nLast name: ' + response.data.lastName +
+        '\nDNI: ' + response.data.dni +
+        '\nDate of birth: ' + response.data.dob +
+        '\nPhone number: ' + response.data.phone +
+        '\nAddress: ' + response.data.address +
+        '\nCity: ' + response.data.city +
+        '\nPostal code: ' + response.data.zip +
+        '\nEmail: ' + response.data.email +
+        '\nPassword: ' + response.data.password +
+        '\nRepeat password: ' + response.data.password);
+    }
+
+    // Function to validate before sending the request
+    function validationOnClick() {
+        nameCheck();
+        lastNameCheck();
+        dniCheck();
+        dateBirthCheck();
+        phoneNumberCheck();
+        addressCheck();
+        cityCheck();
+        postalCodeCheck();
+        emailCheck();
+        passwordCheck();
+        passwordRepCheck();
+        var resultClick = true;
+        for (var x = 0; x < arrayFinalValidation.length; x++) {
+            resultClick = resultClick && arrayFinalValidation[x];
+        }
+        return (resultClick);
     }
 
     // Function to send data to the api and handle the errors or successes
     function submitSignup(event) {
         event.preventDefault();
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
-        if (true) {
-            fetch(url + '?name=Jack&lastName=Nowak&dni=38540163&dob=03/30/1995&phone=1234567890&address=Lorenzo 1385&city=Rosario&zip=2000&email=hola@hola.com&password=qwe123qwe')
+        if (validationOnClick() === true) {
+            fetch(url + '?name=' + name.value + '&lastName=' + lastName.value + '&dni=' + dni.value + '&dob=' + transformDateRequest(dateOfBirth.value) + '&phone=' + phoneNumber.value + '&address=' + address.value + '&city=' + city.value + '&zip=' + postalCode.value + '&email=' + email.value + '&password=' + password.value)
             .then(function (response) {
                 return response.json();
             })
             .then(function (jsonResponse) {
-                console.log("json", jsonResponse);
+                // console.log("json", jsonResponse);
                 if (jsonResponse.success) {
-                    console.log("Good", jsonResponse);
+                    // console.log("Good", jsonResponse);
                     saveLocalStorage(jsonResponse);
-                    alert(jsonResponse.msg);
+                    alertSuccess(jsonResponse);
                 } else {
-                    alert('Error\n' + jsonResponse.msg);
+                    alert('Error\n' + reqErrors(jsonResponse));
                     throw jsonResponse;
                 }
             })
             .catch(function (error) {
-                console.warn('Error', error);
-                alert('Wrong');
+                // console.warn('Error', error);
+                alert('Wrong values sent to the request');
             })
             } else {
-            alert('Invalid');
+            alert('Some inputs are invalid');
         }
     }
 
@@ -498,7 +567,7 @@ window.onload = function() {
     name.addEventListener("blur", nameCheck);
     name.addEventListener("focus", nameCheckFocus);
 
-    lastName.addEventListener("blur", lastnameCheck);
+    lastName.addEventListener("blur", lastNameCheck);
     lastName.addEventListener("focus", lastNameCheckFocus);
 
     dni.addEventListener("blur", dniCheck);
@@ -526,7 +595,7 @@ window.onload = function() {
     password.addEventListener("focus", passwordCheckFocus);
 
     passwordRepeat.addEventListener("blur", passwordRepCheck);
-    passwordRepeat.addEventListener("focus", passwordRepCheck);
+    passwordRepeat.addEventListener("focus", passwordRepCheckFocus);
 
     signupButton.addEventListener("click", submitSignup);
 
